@@ -1378,13 +1378,225 @@
 
       </div>
 
+    <!-- ======================================================================= -->
+    <!-- SECTION: THE BRANCH ATLAS — سكشن فروعنا الإبداعي والتفاعلي             -->
+    <!-- ======================================================================= -->
+    <section id="branch-atlas" class="relative py-20 sm:py-28 lg:py-32 bg-[#1A1916] border-t border-b border-white/10 overflow-hidden select-none" aria-labelledby="branch-atlas-heading">
+      
+      <!-- Architectural Background: Blueprint Grid & Ambient Glows -->
+      <div class="absolute inset-0 blueprint-grid opacity-20 pointer-events-none"></div>
+      <div class="absolute top-1/4 -right-28 w-96 h-96 bg-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div class="absolute bottom-10 -left-20 w-80 h-80 bg-walnut/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- 1. Editorial Header -->
+        <div class="max-w-3xl mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel-gold border border-gold/40 mb-4 sm:mb-6 badge-shimmer">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span class="text-xs font-bold font-cinzel tracking-widest text-gold-light uppercase">OUR LOCATIONS</span>
+            <span class="text-white/20 text-xs">/</span>
+            <span class="text-xs font-bold text-ivory">فروعنا</span>
+          </div>
+
+          <h2 id="branch-atlas-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-ivory leading-[1.25] sm:leading-[1.18] tracking-tight mb-4">
+            حيث تبدأ الفكرة..
+            <span class="block text-gold-gradient mt-1 sm:mt-2">نكون أقرب إليك</span>
+          </h2>
+
+          <p class="text-sm sm:text-base text-ivory/80 leading-relaxed font-normal max-w-2xl border-s-2 border-gold/40 ps-4">
+            اكتشف مواقعنا، واختر الوجهة التي ترغب في زيارتها للتعرف على موقعنا وخدماتنا بصورة أقرب.
+          </p>
+        </div>
+
+        <!-- 2. Interactive Location Atlas Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          
+          <!-- Column 1: Vertical Branch Selector List (Cols 5) -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-3 sm:space-y-4" role="tablist" aria-label="قائمة فروع رِواق">
+            
+            <!-- Branch 01 -->
+            <button type="button" 
+                    class="branch-selector-btn group text-right w-full p-5 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all duration-300 relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold/50 bg-[#24231F]/90 border-gold/50 shadow-xl"
+                    data-branch-id="main"
+                    data-index="0"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="atlas-stage-panel">
+              <div class="flex items-start justify-between gap-4 relative z-10">
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <span class="branch-num font-mono text-xl sm:text-2xl font-black text-gold transition-colors">01</span>
+                  <div>
+                    <h3 class="branch-name text-base sm:text-lg font-bold text-gold transition-colors">الموقع الرئيسي</h3>
+                    <p class="branch-tagline text-xs text-ivory/50 mt-1 font-medium">الرياض • المقر الرئيسي والأتيليه المعماري</p>
+                  </div>
+                </div>
+                <div class="branch-indicator w-8 h-8 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center shrink-0 text-gold transition-all duration-300">
+                  <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </div>
+              </div>
+              <div class="branch-active-border absolute inset-y-0 start-0 w-1.5 bg-gradient-to-b from-gold via-gold-light to-gold-dark opacity-100 transition-opacity duration-300"></div>
+            </button>
+
+            <!-- Branch 02 -->
+            <button type="button" 
+                    class="branch-selector-btn group text-right w-full p-5 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all duration-300 relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold/50 bg-transparent border-white/10 hover:border-white/25"
+                    data-branch-id="ahsa"
+                    data-index="1"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="atlas-stage-panel">
+              <div class="flex items-start justify-between gap-4 relative z-10">
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <span class="branch-num font-mono text-xl sm:text-2xl font-black text-ivory/40 transition-colors">02</span>
+                  <div>
+                    <h3 class="branch-name text-base sm:text-lg font-bold text-ivory/80 group-hover:text-gold transition-colors">ارتلومكسا – الأحساء</h3>
+                    <p class="branch-tagline text-xs text-ivory/50 mt-1 font-medium">المنطقة الشرقية • الأحساء</p>
+                  </div>
+                </div>
+                <div class="branch-indicator w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-ivory/40 group-hover:text-gold transition-all duration-300">
+                  <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </div>
+              </div>
+              <div class="branch-active-border absolute inset-y-0 start-0 w-1.5 bg-gradient-to-b from-gold via-gold-light to-gold-dark opacity-0 transition-opacity duration-300"></div>
+            </button>
+
+            <!-- Branch 03 -->
+            <button type="button" 
+                    class="branch-selector-btn group text-right w-full p-5 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all duration-300 relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold/50 bg-transparent border-white/10 hover:border-white/25"
+                    data-branch-id="design"
+                    data-index="2"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="atlas-stage-panel">
+              <div class="flex items-start justify-between gap-4 relative z-10">
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <span class="branch-num font-mono text-xl sm:text-2xl font-black text-ivory/40 transition-colors">03</span>
+                  <div>
+                    <h3 class="branch-name text-base sm:text-lg font-bold text-ivory/80 group-hover:text-gold transition-colors">ابتكار وتصميم</h3>
+                    <p class="branch-tagline text-xs text-ivory/50 mt-1 font-medium">مركز الابتكار والتصميم والتخصيص الهندسي</p>
+                  </div>
+                </div>
+                <div class="branch-indicator w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-ivory/40 group-hover:text-gold transition-all duration-300">
+                  <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </div>
+              </div>
+              <div class="branch-active-border absolute inset-y-0 start-0 w-1.5 bg-gradient-to-b from-gold via-gold-light to-gold-dark opacity-0 transition-opacity duration-300"></div>
+            </button>
+
+            <!-- Navigation Guidance Note -->
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-xs text-ivory/60 flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse"></span>
+              <span>انقر على أي وجهة لمعاينة تفاصيلها وفتح موقعها المباشر على خرائط Google</span>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Selected Destination Display Panel (Cols 7) -->
+          <div id="atlas-stage-panel" 
+               class="lg:col-span-7 relative rounded-3xl bg-[#24231F]/90 border border-gold/30 p-6 sm:p-8 lg:p-10 flex flex-col justify-between overflow-hidden shadow-2xl backdrop-blur-xl transition-all duration-500"
+               role="tabpanel"
+               aria-live="polite">
+
+            <!-- Architectural Blueprint / Topographic Canvas Backdrop -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
+              <svg class="w-full h-full text-gold/30" viewBox="0 0 800 600" fill="none" stroke="currentColor" stroke-width="1.2" preserveAspectRatio="none">
+                <circle cx="400" cy="300" r="80" stroke-dasharray="4 4" class="opacity-40"/>
+                <circle cx="400" cy="300" r="160" stroke-dasharray="6 6" class="opacity-50"/>
+                <circle cx="400" cy="300" r="240" stroke-dasharray="8 8" class="opacity-60"/>
+                <circle cx="400" cy="300" r="320" stroke-dasharray="10 10" class="opacity-70"/>
+                <line x1="0" y1="300" x2="800" y2="300" stroke-width="0.8" class="opacity-30"/>
+                <line x1="400" y1="0" x2="400" y2="600" stroke-width="0.8" class="opacity-30"/>
+                <rect x="250" y="180" width="300" height="240" stroke-dasharray="2 4" class="opacity-25"/>
+              </svg>
+              <div class="absolute inset-0 bg-radial-vignette opacity-90"></div>
+            </div>
+
+            <!-- Stage Top Bar: Index & Badge -->
+            <div class="relative z-10 flex items-center justify-between gap-4 pb-6 border-b border-white/10 text-xs">
+              <div class="flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold border border-[#161512] ring-4 ring-gold/20 animate-pulse"></span>
+                <span id="atlas-stage-badge" class="font-cinzel text-[11px] sm:text-xs text-gold tracking-widest uppercase font-bold">
+                  HQ & FLAGSHIP ATELIER • المركز الرئيسي
+                </span>
+              </div>
+              <span id="atlas-stage-num" class="font-mono text-xs sm:text-sm font-bold text-gold/70 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
+                DESTINATION 01 / 03
+              </span>
+            </div>
+
+            <!-- Stage Middle Content: Dynamic Information -->
+            <div class="relative z-10 py-8 sm:py-10">
+              <div id="atlas-content-wrapper" class="transition-all duration-300">
+                
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/50 border border-emerald-500/30 text-[11px] text-emerald-300 mb-4">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span id="atlas-stage-status">موقع جغرافي مؤكد ومباشر عبر خرائط Google</span>
+                </div>
+
+                <h3 id="atlas-stage-name" class="text-2xl sm:text-3xl lg:text-4xl font-black text-ivory tracking-tight mb-3">
+                  الموقع الرئيسي
+                </h3>
+
+                <p id="atlas-stage-desc" class="text-sm sm:text-base text-ivory/80 leading-relaxed font-normal max-w-xl border-s-2 border-gold/40 ps-4 mb-6">
+                  الوجهة الرئيسية لاستقبال العملاء واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.
+                </p>
+
+                <!-- Spec Metadata Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10 text-xs text-ivory/60">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase font-mono text-gold/60">المنطقة</span>
+                    <span id="atlas-stage-region" class="font-semibold text-ivory/90 mt-0.5">الرياض</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase font-mono text-gold/60">نوع الوجهة</span>
+                    <span id="atlas-stage-type" class="font-semibold text-ivory/90 mt-0.5">المقر الرئيسي والأتيليه المعماري</span>
+                  </div>
+                  <div class="flex flex-col col-span-2 sm:col-span-1">
+                    <span class="text-[10px] uppercase font-mono text-gold/60">الوصول الجغرافي</span>
+                    <span class="font-semibold text-emerald-400 mt-0.5">متاح عبر الخرائط</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Stage Bottom Bar: Action CTA & Compass Metadata -->
+            <div class="relative z-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+              
+              <!-- Primary Action: Open Verified Google Maps URL -->
+              <a id="atlas-stage-maps-link" 
+                 href="https://share.google/LKRspYWMtX0w8RT4Z" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="group relative overflow-hidden px-8 py-4 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-charcoal font-black text-sm sm:text-base shadow-2xl hover:shadow-gold/30 transition-all duration-300 flex items-center justify-center gap-3">
+                <svg class="w-5 h-5 text-charcoal shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span class="relative z-10 font-bold">افتح الموقع على خرائط Google</span>
+                <svg class="w-4 h-4 text-charcoal group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
+
+              <!-- Compass Note -->
+              <div class="text-[11px] font-mono text-gold/50 flex items-center gap-2 select-none justify-center sm:justify-end">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
+                <span id="atlas-stage-coord">CENTRAL ATELIER DESTINATION</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
   </main>
-
-  <!-- ========================================================================= -->
-  <!-- CINEMATIC LUXURY FOOTER: "The Final Signature"                            -->
-  <!-- ========================================================================= -->
   <footer id="site-footer" class="relative overflow-hidden bg-[#161512] text-ivory border-t border-gold/25 select-none pt-20 sm:pt-28 pb-10" aria-label="تذييل الموقع - رِواق للأعمال الخشبية">
     
     <!-- 1. Architectural Cinematic Background Layer -->

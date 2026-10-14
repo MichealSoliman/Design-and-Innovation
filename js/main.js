@@ -1954,8 +1954,179 @@ function initializeRiwaq() {
       window.footerController = new LuxuryFooterController(config);
       console.log('[RIWAQ] Luxury Footer controller initialized.');
     }
+
+    // The Branch Atlas Controller ("وجهاتنا أقرب إليك" - Global across all pages)
+    if (!window.branchAtlasController && document.getElementById('branch-atlas')) {
+      window.branchAtlasController = new LuxuryBranchAtlasController();
+      console.log('[RIWAQ] The Branch Atlas controller initialized.');
+    }
   } catch (err) {
     console.error('[RIWAQ] Init Error:', err);
+  }
+}
+
+/**
+ * ==========================================================================
+ * RIWAQ THE BRANCH ATLAS CONTROLLER
+ * Interactive Architectural Destination Discovery System
+ * ==========================================================================
+ */
+class LuxuryBranchAtlasController {
+  constructor() {
+    this.section = document.getElementById('branch-atlas');
+    if (!this.section) return;
+
+    // Branches dataset as provided in specification
+    this.branches = [
+      {
+        id: 'main',
+        index: '01',
+        name: 'الموقع الرئيسي',
+        region: 'الرياض',
+        type: 'المقر الرئيسي والأتيليه المعماري',
+        badge: 'HQ & FLAGSHIP ATELIER • المركز الرئيسي',
+        desc: 'الوجهة الرئيسية لاستقبال العملاء واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
+        mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'CENTRAL ATELIER DESTINATION'
+      },
+      {
+        id: 'ahsa',
+        index: '02',
+        name: 'ارتلومكسا – الأحساء',
+        region: 'الأحساء',
+        type: 'صالة عرض وتصميم مخصص',
+        badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
+        desc: 'فرع الأحساء لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
+        mapsUrl: 'https://share.google/SyhuyADqAx3XPWQdH',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'AL AHSA PROVINCE DESTINATION'
+      },
+      {
+        id: 'design',
+        index: '03',
+        name: 'ابتكار وتصميم',
+        region: 'الرياض',
+        type: 'مركز الابتكار والتخصيص الهندسي',
+        badge: 'INNOVATION & BESPOKE DESIGN • قسم التصميم',
+        desc: 'مركز الابتكار والتصميم الهندسي لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
+        mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'DESIGN & CONCEPT STUDIO'
+      }
+    ];
+
+    this.currentIndex = 0;
+    this.buttons = this.section.querySelectorAll('.branch-selector-btn');
+    this.stageName = this.section.querySelector('#atlas-stage-name');
+    this.stageBadge = this.section.querySelector('#atlas-stage-badge');
+    this.stageNum = this.section.querySelector('#atlas-stage-num');
+    this.stageDesc = this.section.querySelector('#atlas-stage-desc');
+    this.stageRegion = this.section.querySelector('#atlas-stage-region');
+    this.stageType = this.section.querySelector('#atlas-stage-type');
+    this.stageStatus = this.section.querySelector('#atlas-stage-status');
+    this.stageMapsLink = this.section.querySelector('#atlas-stage-maps-link');
+    this.stageCoord = this.section.querySelector('#atlas-stage-coord');
+    this.contentWrapper = this.section.querySelector('#atlas-content-wrapper');
+
+    this.init();
+  }
+
+  init() {
+    this.bindEvents();
+    this.renderButtons();
+    this.renderActiveBranch(0, false);
+  }
+
+  bindEvents() {
+    this.buttons.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        if (this.currentIndex === idx) return;
+        this.selectBranch(idx);
+      });
+
+      // Accessible Keyboard Navigation
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const nextIdx = (idx + 1) % this.buttons.length;
+          this.buttons[nextIdx].focus();
+          this.selectBranch(nextIdx);
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          const prevIdx = (idx - 1 + this.buttons.length) % this.buttons.length;
+          this.buttons[prevIdx].focus();
+          this.selectBranch(prevIdx);
+        }
+      });
+    });
+  }
+
+  selectBranch(idx) {
+    this.currentIndex = idx;
+    this.renderButtons();
+    this.renderActiveBranch(idx, true);
+  }
+
+  renderButtons() {
+    this.buttons.forEach((btn, idx) => {
+      const isActive = idx === this.currentIndex;
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      
+      const num = btn.querySelector('.branch-num');
+      const name = btn.querySelector('.branch-name');
+      const indicator = btn.querySelector('.branch-indicator');
+      const border = btn.querySelector('.branch-active-border');
+
+      if (isActive) {
+        btn.classList.add('bg-[#24231F]/90', 'border-gold/50', 'shadow-xl');
+        btn.classList.remove('bg-transparent', 'border-white/10');
+        if (num) { num.classList.add('text-gold'); num.classList.remove('text-ivory/40'); }
+        if (name) { name.classList.add('text-gold'); name.classList.remove('text-ivory/80'); }
+        if (indicator) {
+          indicator.classList.add('bg-gold/20', 'border-gold/40', 'text-gold');
+          indicator.classList.remove('bg-white/5', 'border-white/10', 'text-ivory/40');
+        }
+        if (border) { border.classList.remove('opacity-0'); border.classList.add('opacity-100'); }
+      } else {
+        btn.classList.remove('bg-[#24231F]/90', 'border-gold/50', 'shadow-xl');
+        btn.classList.add('bg-transparent', 'border-white/10');
+        if (num) { num.classList.remove('text-gold'); num.classList.add('text-ivory/40'); }
+        if (name) { name.classList.remove('text-gold'); name.classList.add('text-ivory/80'); }
+        if (indicator) {
+          indicator.classList.remove('bg-gold/20', 'border-gold/40', 'text-gold');
+          indicator.classList.add('bg-white/5', 'border-white/10', 'text-ivory/40');
+        }
+        if (border) { border.classList.remove('opacity-100'); border.classList.add('opacity-0'); }
+      }
+    });
+  }
+
+  renderActiveBranch(idx, animate = true) {
+    const branch = this.branches[idx];
+    if (!branch) return;
+
+    const updateContent = () => {
+      if (this.stageBadge) this.stageBadge.textContent = branch.badge;
+      if (this.stageNum) this.stageNum.textContent = `DESTINATION ${branch.index} / 03`;
+      if (this.stageName) this.stageName.textContent = branch.name;
+      if (this.stageDesc) this.stageDesc.textContent = branch.desc;
+      if (this.stageRegion) this.stageRegion.textContent = branch.region;
+      if (this.stageType) this.stageType.textContent = branch.type;
+      if (this.stageStatus) this.stageStatus.textContent = branch.status;
+      if (this.stageMapsLink) this.stageMapsLink.setAttribute('href', branch.mapsUrl);
+      if (this.stageCoord) this.stageCoord.textContent = branch.coordNote;
+    };
+
+    if (animate && this.contentWrapper) {
+      this.contentWrapper.classList.add('opacity-0', 'translate-y-2');
+      setTimeout(() => {
+        updateContent();
+        this.contentWrapper.classList.remove('opacity-0', 'translate-y-2');
+      }, 150);
+    } else {
+      updateContent();
+    }
   }
 }
 
