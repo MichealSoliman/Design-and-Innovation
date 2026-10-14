@@ -1560,10 +1560,66 @@ class LuxuryGalleryController {
 
   init() {
     this.bindFilters();
+    this.bindFilterArrows();
     this.bindGalleryItems();
     this.bindPerspectives();
     this.bindHotspots();
     this.bindLightbox();
+  }
+
+  bindFilterArrows() {
+    const track = document.getElementById('filter-scroll-container');
+    const rightBtn = document.getElementById('filter-scroll-right');
+    const leftBtn = document.getElementById('filter-scroll-left');
+
+    if (!track || !rightBtn || !leftBtn) return;
+
+    // Smooth scroll step (~1.5 button widths)
+    const step = 220;
+
+    rightBtn.addEventListener('click', () => {
+      track.scrollBy({ left: step, behavior: 'smooth' });
+    });
+
+    leftBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    // Auto-center clicked button within the track
+    this.filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+    });
+
+    // Subtle state update for arrows
+    const updateArrows = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 4) {
+        rightBtn.classList.add('opacity-35', 'pointer-events-none');
+        leftBtn.classList.add('opacity-35', 'pointer-events-none');
+        return;
+      }
+      rightBtn.classList.remove('pointer-events-none');
+      leftBtn.classList.remove('pointer-events-none');
+
+      const current = Math.abs(track.scrollLeft);
+      if (current <= 8) {
+        rightBtn.classList.add('opacity-35');
+      } else {
+        rightBtn.classList.remove('opacity-35');
+      }
+
+      if (current >= maxScroll - 8) {
+        leftBtn.classList.add('opacity-35');
+      } else {
+        leftBtn.classList.remove('opacity-35');
+      }
+    };
+
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows, { passive: true });
+    setTimeout(updateArrows, 200);
   }
 
   bindFilters() {
@@ -1976,43 +2032,56 @@ class LuxuryBranchAtlasController {
     this.section = document.getElementById('branch-atlas');
     if (!this.section) return;
 
-    // Branches dataset as provided in specification
+    // Branches dataset with verified phone numbers & addresses
     this.branches = [
       {
         id: 'main',
         index: '01',
-        name: 'الموقع الرئيسي',
+        name: 'ارتلومكسا – الرياض',
         region: 'الرياض',
+        address: 'حي الورود، طريق الملك عبدالعزيز',
         type: 'المقر الرئيسي والأتيليه المعماري',
-        badge: 'HQ & FLAGSHIP ATELIER • المركز الرئيسي',
-        desc: 'الوجهة الرئيسية لاستقبال العملاء واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
+        badge: 'HQ & FLAGSHIP ATELIER • ارتلومكسا الرياض',
+        desc: 'فرع ارتلومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
+        phones: [
+          { number: '0534001939', label: 'الرقم المباشر' }
+        ],
         mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'CENTRAL ATELIER DESTINATION'
+        coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       },
       {
         id: 'ahsa',
         index: '02',
         name: 'ارتلومكسا – الأحساء',
         region: 'الأحساء',
+        address: 'حي الفتح، المبرز',
         type: 'صالة عرض وتصميم مخصص',
         badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
-        desc: 'فرع الأحساء لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
+        desc: 'فرع ارتلومكسا بالأحساء، حي الفتح - المبرز، لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
+        phones: [
+          { number: '0539397326', label: 'الرقم المباشر' }
+        ],
         mapsUrl: 'https://share.google/SyhuyADqAx3XPWQdH',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'AL AHSA PROVINCE DESTINATION'
+        coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
       },
       {
         id: 'design',
         index: '03',
         name: 'ابتكار وتصميم',
         region: 'الرياض',
+        address: 'حي الورود، طريق الملك عبدالعزيز',
         type: 'مركز الابتكار والتخصيص الهندسي',
-        badge: 'INNOVATION & BESPOKE DESIGN • قسم التصميم',
-        desc: 'مركز الابتكار والتصميم الهندسي لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
+        badge: 'INNOVATION & BESPOKE DESIGN • ابتكار وتصميم',
+        desc: 'مركز ابتكار وتصميم بالرياض، حي الورود طريق الملك عبدالعزيز، لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
+        phones: [
+          { number: '0533879478', label: 'رقم 01' },
+          { number: '0552207629', label: 'رقم 02' }
+        ],
         mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'DESIGN & CONCEPT STUDIO'
+        coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       }
     ];
 
@@ -2027,6 +2096,7 @@ class LuxuryBranchAtlasController {
     this.stageStatus = this.section.querySelector('#atlas-stage-status');
     this.stageMapsLink = this.section.querySelector('#atlas-stage-maps-link');
     this.stageCoord = this.section.querySelector('#atlas-stage-coord');
+    this.stagePhonesContainer = this.section.querySelector('#atlas-stage-phones');
     this.contentWrapper = this.section.querySelector('#atlas-content-wrapper');
 
     this.init();
@@ -2116,6 +2186,25 @@ class LuxuryBranchAtlasController {
       if (this.stageStatus) this.stageStatus.textContent = branch.status;
       if (this.stageMapsLink) this.stageMapsLink.setAttribute('href', branch.mapsUrl);
       if (this.stageCoord) this.stageCoord.textContent = branch.coordNote;
+
+      if (this.stagePhonesContainer) {
+        this.stagePhonesContainer.innerHTML = branch.phones.map(p => {
+          const cleanNum = p.number.replace(/\D/g, '');
+          const intlNum = cleanNum.startsWith('0') ? '966' + cleanNum.substring(1) : cleanNum;
+          return `
+            <div class="inline-flex items-center gap-2">
+              <a href="tel:+${intlNum}" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-gold/20 text-gold-light hover:text-gold border border-gold/30 hover:border-gold flex items-center gap-2 text-xs font-mono font-bold transition-all shadow-sm group" title="اتصال بـ ${branch.name}">
+                <svg class="w-3.5 h-3.5 text-gold group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>${p.number}</span>
+              </a>
+              <a href="https://wa.me/${intlNum}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/60 flex items-center gap-1.5 text-xs font-medium transition-all shadow-sm" aria-label="واتساب ${p.number}">
+                <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.449.741.964 1.2.662.589 1.22.772 1.393.858.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.419-.1.824z"/></svg>
+                <span class="hidden sm:inline">واتساب</span>
+              </a>
+            </div>
+          `;
+        }).join('');
+      }
     };
 
     if (animate && this.contentWrapper) {

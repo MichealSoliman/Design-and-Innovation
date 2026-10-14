@@ -456,19 +456,48 @@ body {
 }
 
 .portfolio-filter-btn {
+  background-color: rgba(36, 35, 31, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #F6F2EB;
+  backdrop-filter: blur(12px);
   transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.portfolio-filter-btn:hover {
+  background-color: rgba(48, 46, 40, 0.95);
+  border-color: rgba(184, 154, 104, 0.55);
+  color: #D4BD93;
+  transform: translateY(-1px);
+}
+
 .portfolio-filter-btn.is-active {
-  background-color: rgba(184, 154, 104, 0.18);
+  background: linear-gradient(135deg, rgba(184, 154, 104, 0.28) 0%, rgba(104, 70, 50, 0.4) 100%);
   border-color: #B89A68;
-  color: #F6F2EB;
-  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(184, 154, 104, 0.15);
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 18px -2px rgba(184, 154, 104, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.25);
 }
 
 .portfolio-filter-btn.is-active .filter-dot {
   background-color: #B89A68;
   opacity: 1;
+  box-shadow: 0 0 8px #B89A68;
+}
+
+/* Filter Navigation Arrows (Mobile/Tablet) */
+.filter-nav-arrow {
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-nav-arrow:hover {
+  transform: scale(1.06);
+  border-color: #B89A68;
+}
+
+.filter-nav-arrow:active {
+  transform: scale(0.94);
 }
 
 /* Lightbox Modal Transitions */
@@ -678,6 +707,26 @@ body {
 }
 
 
+/* Hide Native Scrollbars Across All Browsers */
+.no-scrollbar::-webkit-scrollbar,
+#portfolio-filter-nav ::-webkit-scrollbar,
+#portfolio-filter-nav::-webkit-scrollbar,
+#lightbox-filmstrip::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none !important;
+  background: transparent !important;
+}
+
+.no-scrollbar,
+#portfolio-filter-nav,
+#portfolio-filter-nav *,
+#lightbox-filmstrip {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;     /* Firefox */
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -693,3 +742,4 @@ body {
     transform: none !important;
   }
 }
+
