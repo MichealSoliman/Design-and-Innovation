@@ -55,7 +55,7 @@ class LuxuryNavbarController {
 
     const toggle = (force) => {
       this.isOpen = typeof force === 'boolean' ? force : !this.isOpen;
-      
+
       if (this.isOpen) {
         this.mobileMenu.classList.remove('translate-x-full', 'pointer-events-none');
         this.mobileMenu.classList.add('translate-x-0');
@@ -142,7 +142,7 @@ class LuxuryNavbarController {
 class LuxuryHeroSlider {
   constructor(config) {
     this.config = config || window.LUXURY_CONFIG || (typeof LUXURY_CONFIG !== 'undefined' ? LUXURY_CONFIG : null);
-    
+
     if (!this.config || !this.config.slides || !this.config.slides.length) {
       console.error('[RIWAQ] No slides configured in LUXURY_CONFIG');
       return;
@@ -222,7 +222,7 @@ class LuxuryHeroSlider {
       img.setAttribute('role', 'img');
       img.setAttribute('aria-label', slide.alt);
       img.setAttribute('data-slide-index', index);
-      
+
       img.onerror = () => {
         img.style.backgroundColor = '#2d211a';
       };
@@ -239,11 +239,10 @@ class LuxuryHeroSlider {
       this.desktopThumbElements = this.slides.map((slide, index) => {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = `thumb-card w-full text-right p-2.5 rounded-2xl border transition-all duration-300 flex items-center gap-3.5 group cursor-pointer ${
-          index === 0 
-            ? 'active border-[#B89A68] bg-[#684632]/40 shadow-lg' 
+        btn.className = `thumb-card w-full text-right p-2.5 rounded-2xl border transition-all duration-300 flex items-center gap-3.5 group cursor-pointer ${index === 0
+            ? 'active border-[#B89A68] bg-[#684632]/40 shadow-lg'
             : 'border-white/10 bg-[#24231F]/50 hover:bg-[#24231F]/80 hover:border-white/20'
-        }`;
+          }`;
         btn.setAttribute('aria-label', `الانتقال إلى شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
 
@@ -279,11 +278,10 @@ class LuxuryHeroSlider {
       this.mobileThumbElements = this.slides.map((slide, index) => {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = `mobile-thumb-card shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl border text-right transition-all duration-300 cursor-pointer ${
-          index === 0 
-            ? 'active border-[#B89A68] bg-[#684632]/50 ring-2 ring-[#B89A68]/40' 
+        btn.className = `mobile-thumb-card shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl border text-right transition-all duration-300 cursor-pointer ${index === 0
+            ? 'active border-[#B89A68] bg-[#684632]/50 ring-2 ring-[#B89A68]/40'
             : 'border-white/10 bg-[#24231F]/60'
-        }`;
+          }`;
         btn.setAttribute('aria-label', `شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
 
@@ -333,7 +331,7 @@ class LuxuryHeroSlider {
     if (this.badgeEl) this.badgeEl.textContent = slide.badge || slide.category;
     if (this.titleEl) this.titleEl.textContent = slide.title;
     if (this.descriptionEl) this.descriptionEl.textContent = slide.description;
-    
+
     if (this.primaryCta) {
       const primaryTextSpan = this.primaryCta.querySelector('span');
       if (primaryTextSpan) {
@@ -343,7 +341,7 @@ class LuxuryHeroSlider {
       }
       this.primaryCta.setAttribute('href', slide.primaryCta.href);
     }
-    
+
     if (this.secondaryCta) {
       const secondaryTextSpan = this.secondaryCta.querySelector('span');
       if (secondaryTextSpan) {
@@ -827,11 +825,10 @@ class LuxuryServicesController {
     this.catalogElements = this.services.map((service, index) => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = `service-catalog-item w-full p-3 rounded-2xl border text-right flex items-center justify-between group cursor-pointer ${
-        index === 0 
-          ? 'active' 
+      btn.className = `service-catalog-item w-full p-3 rounded-2xl border text-right flex items-center justify-between group cursor-pointer ${index === 0
+          ? 'active'
           : 'border-white/5 hover:border-white/20 hover:bg-white/5'
-      }`;
+        }`;
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
       btn.setAttribute('data-service-index', index);
@@ -869,11 +866,10 @@ class LuxuryServicesController {
     this.mobileTabElements = this.services.map((service, index) => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = `mobile-service-pill shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl border text-xs whitespace-nowrap transition-all duration-200 cursor-pointer ${
-        index === 0 
-          ? 'active bg-walnut text-ivory border-gold/60 ring-2 ring-gold/30 font-bold' 
+      btn.className = `mobile-service-pill shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl border text-xs whitespace-nowrap transition-all duration-200 cursor-pointer ${index === 0
+          ? 'active bg-walnut text-ivory border-gold/60 ring-2 ring-gold/30 font-bold'
           : 'bg-white/5 text-ivory/70 border-white/10 hover:text-ivory'
-      }`;
+        }`;
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
       btn.setAttribute('data-service-index', index);
@@ -1440,11 +1436,10 @@ class LuxuryContactFormController {
   showAlert(message, isError = true) {
     if (!this.alertBox) return;
     this.alertBox.textContent = message;
-    this.alertBox.className = `p-3.5 rounded-xl text-xs font-semibold border ${
-      isError 
-        ? 'bg-rose-950/40 text-rose-300 border-rose-500/30' 
+    this.alertBox.className = `p-3.5 rounded-xl text-xs font-semibold border ${isError
+        ? 'bg-rose-950/40 text-rose-300 border-rose-500/30'
         : 'bg-emerald-950/40 text-emerald-300 border-emerald-500/30'
-    } transition-all duration-300`;
+      } transition-all duration-300`;
     this.alertBox.classList.remove('hidden');
   }
 
@@ -1509,7 +1504,7 @@ class LuxuryContactFormController {
           const name = encodeURIComponent(this.nameInput?.value.trim() || '');
           const service = encodeURIComponent(this.selectedService || '');
           const details = encodeURIComponent(this.detailsInput?.value.trim() || '');
-          const msg = `مرحباً رِواق، أنا ${name}. أود مناقشة مشروع (${service}). التفاصيل: ${details}`;
+          const msg = `مرحباً ابتكار وتصميم، أنا ${name}. أود مناقشة مشروع (${service}). التفاصيل: ${details}`;
           whatsappBtn.href = `https://wa.me/966500000000?text=${encodeURIComponent(msg)}`;
         }
       }
@@ -1861,7 +1856,7 @@ class LuxuryGalleryController {
 
     const src = currentItem.getAttribute('data-img-src') || currentItem.querySelector('img')?.src || '';
     const title = currentItem.getAttribute('data-title') || currentItem.querySelector('img')?.alt || 'مشروع خشبي فاخر';
-    const cat = currentItem.getAttribute('data-category') || 'رِواق للأعمال الخشبية';
+    const cat = currentItem.getAttribute('data-category') || 'ابتكار وتصميم للأعمال الخشبية';
 
     if (this.lightboxImg) {
       this.lightboxImg.src = src;
@@ -1883,7 +1878,7 @@ class LuxuryGalleryController {
     }
 
     if (this.waBtn) {
-      const msg = `مرحباً رِواق، أود الاستفسار عن تصميم (${title}) من فئة (${cat}).`;
+      const msg = `مرحباً ابتكار وتصميم، أود الاستفسار عن تصميم (${title}) من فئة (${cat}).`;
       this.waBtn.href = `https://wa.me/966500000000?text=${encodeURIComponent(msg)}`;
     }
 
@@ -2142,7 +2137,7 @@ class LuxuryBranchAtlasController {
     this.buttons.forEach((btn, idx) => {
       const isActive = idx === this.currentIndex;
       btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      
+
       const num = btn.querySelector('.branch-num');
       const name = btn.querySelector('.branch-name');
       const indicator = btn.querySelector('.branch-indicator');

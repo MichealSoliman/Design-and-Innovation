@@ -99,6 +99,7 @@ body {
     opacity: 0;
     transform: translateY(22px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -149,9 +150,17 @@ body {
 }
 
 @keyframes shimmer {
-  0% { right: -100%; }
-  40% { right: 100%; }
-  100% { right: 100%; }
+  0% {
+    right: -100%;
+  }
+
+  40% {
+    right: 100%;
+  }
+
+  100% {
+    right: 100%;
+  }
 }
 
 /* Custom Scrollbars */
@@ -159,14 +168,17 @@ body {
   height: 4px;
   width: 4px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgba(36, 35, 31, 0.5);
   border-radius: 999px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: rgba(184, 154, 104, 0.4);
   border-radius: 999px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(184, 154, 104, 0.7);
 }
@@ -178,7 +190,7 @@ body {
 
 /* Blueprint Grid Background */
 .blueprint-grid {
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(184, 154, 104, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(184, 154, 104, 0.04) 1px, transparent 1px);
   background-size: 36px 36px;
@@ -194,10 +206,12 @@ body {
     transform: scale(1);
     opacity: 0.85;
   }
+
   65% {
     transform: scale(2.4);
     opacity: 0;
   }
+
   100% {
     transform: scale(2.4);
     opacity: 0;
@@ -218,10 +232,21 @@ body {
 }
 
 /* Delay modifiers for staggered reveals */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
 
 /* The Wood Atelier Services Styles */
 .service-catalog-item {
@@ -285,6 +310,7 @@ body {
     opacity: 0;
     transform: translateY(14px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -593,9 +619,20 @@ body {
 }
 
 @keyframes hotspotPulse {
-  0% { transform: scale(0.85); opacity: 0.9; }
-  50% { transform: scale(1.5); opacity: 0; }
-  100% { transform: scale(0.85); opacity: 0; }
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
 }
 
 /* Floating Hotspot Popover Spec Card */
@@ -645,6 +682,7 @@ body {
     background: rgba(28, 27, 23, 0.98);
     border: 1px solid rgba(184, 154, 104, 0.6);
   }
+
   .hotspot-pin:hover .hotspot-popover,
   .hotspot-pin.is-active .hotspot-popover {
     transform: translateY(0);
@@ -698,9 +736,11 @@ body {
   .contact-input-field {
     font-size: 16px !important;
   }
+
   #lightbox-content-box {
     max-height: 94vh;
   }
+
   #lightbox-img {
     max-height: 52vh !important;
   }
@@ -723,12 +763,59 @@ body {
 #portfolio-filter-nav,
 #portfolio-filter-nav *,
 #lightbox-filmstrip {
-  -ms-overflow-style: none !important;  /* IE and Edge */
-  scrollbar-width: none !important;     /* Firefox */
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+  scrollbar-width: none !important;
+  /* Firefox */
+}
+
+/* ========================================================================= */
+/* CONTINUOUS PARTNERS MARQUEE TRACK (Infinite RTL Smooth Seamless Loop)     */
+/* ========================================================================= */
+@keyframes infiniteMarqueeRTL {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+.partners-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.partners-marquee-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: infiniteMarqueeRTL 28s linear infinite;
+  will-change: transform;
+}
+
+.partners-marquee-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+  .partners-marquee-track {
+    animation: none !important;
+    transform: none !important;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   *,
   *::before,
   *::after {
@@ -737,9 +824,9 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
   .hero-bg-slide {
     transition: opacity 150ms ease !important;
     transform: none !important;
   }
 }
-

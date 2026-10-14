@@ -5,7 +5,7 @@
 
 const LUXURY_SLIDES_DATA = {
   brand: {
-    name: "رِواق",
+    name: "ابتكار وتصميم",
     tagline: "للأعمال الخشبية والأثاث الفاخر",
     phone: "+966500000000",
     whatsapp: "https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AD%D9%88%D9%84%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%20%D8%A3%D8%AB%D8%A7%D8%AB%20%D8%AE%D8%B4%D8%A8%D9%8A",
@@ -175,8 +175,8 @@ const LUXURY_SLIDES_DATA = {
       name: "المطابخ الخشبية",
       title: "تصميم جميل.. واستخدام أذكى",
       description: "حلول مطابخ تراعي توزيع الوحدات ومساحات العمل والتخزين، مع اهتمام بالتفاصيل والتشطيبات.",
-      image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80",
-      spec: "مفصلات أوروبية ذكية • خامات مقاومة للرطوبة • جزر خشبية",
+      image: "./img/kitchen/Artboard 6.png",
+      spec: "مفصلات أوروبية ذكية • خامات مقاومة للرطوبة • جزر رخامية وخشبية",
       dimensions: "DIM: 480 × 340 CM",
       href: "#kitchens",
       badge: "مطابخ عصرية"
