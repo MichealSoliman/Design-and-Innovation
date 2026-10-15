@@ -32,11 +32,11 @@ class LuxuryNavbarController {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (scrollY > 30) {
-        this.navContainer?.classList.add('bg-[#24231F]/90', 'shadow-2xl', 'border-white/15', 'py-2.5');
-        this.navContainer?.classList.remove('bg-[#24231F]/60', 'py-3.5');
+        this.navContainer?.classList.add('bg-[#19241E]/90', 'shadow-2xl', 'border-white/15', 'py-2.5');
+        this.navContainer?.classList.remove('bg-[#19241E]/60', 'py-3.5');
       } else {
-        this.navContainer?.classList.remove('bg-[#24231F]/90', 'shadow-2xl', 'border-white/15', 'py-2.5');
-        this.navContainer?.classList.add('bg-[#24231F]/60', 'py-3.5');
+        this.navContainer?.classList.remove('bg-[#19241E]/90', 'shadow-2xl', 'border-white/15', 'py-2.5');
+        this.navContainer?.classList.add('bg-[#19241E]/60', 'py-3.5');
       }
       ticking = false;
     };
@@ -240,8 +240,8 @@ class LuxuryHeroSlider {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = `thumb-card w-full text-right p-2.5 rounded-2xl border transition-all duration-300 flex items-center gap-3.5 group cursor-pointer ${index === 0
-            ? 'active border-[#B89A68] bg-[#684632]/40 shadow-lg'
-            : 'border-white/10 bg-[#24231F]/50 hover:bg-[#24231F]/80 hover:border-white/20'
+            ? 'active border-[#CFB78C] bg-[#324D3E]/40 shadow-lg'
+            : 'border-white/10 bg-[#19241E]/50 hover:bg-[#19241E]/80 hover:border-white/20'
           }`;
         btn.setAttribute('aria-label', `الانتقال إلى شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
@@ -254,8 +254,8 @@ class LuxuryHeroSlider {
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center justify-between gap-1 mb-0.5">
-              <span class="text-xs font-semibold text-[#D4BD93] truncate">${slide.categoryShort}</span>
-              <span class="thumb-active-dot w-2 h-2 rounded-full ${index === 0 ? 'bg-[#B89A68] ring-4 ring-[#B89A68]/30' : 'bg-transparent'} transition-all"></span>
+              <span class="text-xs font-semibold text-[#E3D1B1] truncate">${slide.categoryShort}</span>
+              <span class="thumb-active-dot w-2 h-2 rounded-full ${index === 0 ? 'bg-[#CFB78C] ring-4 ring-[#CFB78C]/30' : 'bg-transparent'} transition-all"></span>
             </div>
             <p class="text-[11px] text-[#F6F2EB]/65 truncate group-hover:text-[#F6F2EB]/90 transition-colors">${slide.title}</p>
           </div>
@@ -279,8 +279,8 @@ class LuxuryHeroSlider {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = `mobile-thumb-card shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl border text-right transition-all duration-300 cursor-pointer ${index === 0
-            ? 'active border-[#B89A68] bg-[#684632]/50 ring-2 ring-[#B89A68]/40'
-            : 'border-white/10 bg-[#24231F]/60'
+            ? 'active border-[#CFB78C] bg-[#324D3E]/50 ring-2 ring-[#CFB78C]/40'
+            : 'border-white/10 bg-[#19241E]/60'
           }`;
         btn.setAttribute('aria-label', `شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
@@ -290,7 +290,7 @@ class LuxuryHeroSlider {
             <img src="${slide.thumbImage}" alt="${slide.categoryShort}" class="w-full h-full object-cover">
           </div>
           <div class="flex flex-col">
-            <span class="text-[10px] text-[#D4BD93] font-cinzel">0${slide.id}</span>
+            <span class="text-[10px] text-[#E3D1B1] font-cinzel">0${slide.id}</span>
             <span class="text-xs font-medium text-[#F6F2EB] whitespace-nowrap">${slide.categoryShort}</span>
           </div>
         `;
@@ -367,12 +367,12 @@ class LuxuryHeroSlider {
     this.desktopThumbElements.forEach((btn, i) => {
       const dot = btn.querySelector('.thumb-active-dot');
       if (i === index) {
-        btn.classList.add('active', 'border-[#B89A68]', 'bg-[#684632]/40', 'shadow-lg');
-        btn.classList.remove('border-white/10', 'bg-[#24231F]/50');
-        if (dot) dot.className = 'thumb-active-dot w-2 h-2 rounded-full bg-[#B89A68] ring-4 ring-[#B89A68]/30 transition-all';
+        btn.classList.add('active', 'border-[#CFB78C]', 'bg-[#324D3E]/40', 'shadow-lg');
+        btn.classList.remove('border-white/10', 'bg-[#19241E]/50');
+        if (dot) dot.className = 'thumb-active-dot w-2 h-2 rounded-full bg-[#CFB78C] ring-4 ring-[#CFB78C]/30 transition-all';
       } else {
-        btn.classList.remove('active', 'border-[#B89A68]', 'bg-[#684632]/40', 'shadow-lg');
-        btn.classList.add('border-white/10', 'bg-[#24231F]/50');
+        btn.classList.remove('active', 'border-[#CFB78C]', 'bg-[#324D3E]/40', 'shadow-lg');
+        btn.classList.add('border-white/10', 'bg-[#19241E]/50');
         if (dot) dot.className = 'thumb-active-dot w-2 h-2 rounded-full bg-transparent transition-all';
       }
     });
@@ -380,8 +380,8 @@ class LuxuryHeroSlider {
     // Update Mobile Thumbnails classes & scroll active thumbnail into view
     this.mobileThumbElements.forEach((btn, i) => {
       if (i === index) {
-        btn.classList.add('active', 'border-[#B89A68]', 'bg-[#684632]/50', 'ring-2', 'ring-[#B89A68]/40');
-        btn.classList.remove('border-white/10', 'bg-[#24231F]/60');
+        btn.classList.add('active', 'border-[#CFB78C]', 'bg-[#324D3E]/50', 'ring-2', 'ring-[#CFB78C]/40');
+        btn.classList.remove('border-white/10', 'bg-[#19241E]/60');
         // Scroll horizontally only inside the thumbnails container, NEVER the window/page
         if (this.mobileThumbnailsContainer) {
           const container = this.mobileThumbnailsContainer;
@@ -393,8 +393,8 @@ class LuxuryHeroSlider {
           }
         }
       } else {
-        btn.classList.remove('active', 'border-[#B89A68]', 'bg-[#684632]/50', 'ring-2', 'ring-[#B89A68]/40');
-        btn.classList.add('border-white/10', 'bg-[#24231F]/60');
+        btn.classList.remove('active', 'border-[#CFB78C]', 'bg-[#324D3E]/50', 'ring-2', 'ring-[#CFB78C]/40');
+        btn.classList.add('border-white/10', 'bg-[#19241E]/60');
       }
     });
   }
@@ -836,7 +836,7 @@ class LuxuryServicesController {
       img.alt = service.name;
       img.className = `service-showcase-slide ${index === 0 ? 'active' : 'inactive'}`;
       img.setAttribute('data-service-index', index);
-      img.onerror = () => { img.style.backgroundColor = '#24231F'; };
+      img.onerror = () => { img.style.backgroundColor = '#19241E'; };
       this.imagesContainer.appendChild(img);
       return img;
     });
@@ -1280,18 +1280,18 @@ class LuxuryDesignDnaController {
       const cursorLine = btn.querySelector('.dna-cursor-line');
 
       if (isSelected) {
-        btn.classList.add('bg-white/[0.04]', 'border-gold/30');
-        btn.classList.remove('border-transparent');
+        btn.classList.add('bg-white', 'border-[#324D3E]', 'shadow-md');
+        btn.classList.remove('bg-transparent', 'border-transparent', 'bg-white/[0.04]', 'border-gold/30');
         if (numEl) {
-          numEl.classList.add('text-gold');
-          numEl.classList.remove('text-ivory/30');
+          numEl.classList.add('text-[#324D3E]');
+          numEl.classList.remove('text-[#324D3E]/40', 'text-ivory/30', 'text-gold');
         }
         if (titleEl) {
-          titleEl.classList.add('text-gold-light');
-          titleEl.classList.remove('text-ivory/70');
+          titleEl.classList.add('text-[#324D3E]');
+          titleEl.classList.remove('text-[#1E2B24]', 'text-ivory/70', 'text-gold-light');
         }
         if (arrowEl) {
-          arrowEl.classList.add('opacity-100', 'translate-x-0');
+          arrowEl.classList.add('opacity-100', 'translate-x-0', 'text-[#324D3E]');
           arrowEl.classList.remove('opacity-0', 'translate-x-2');
         }
         if (cursorLine) {
@@ -1299,18 +1299,18 @@ class LuxuryDesignDnaController {
           cursorLine.classList.remove('scale-y-0', 'opacity-0');
         }
       } else {
-        btn.classList.remove('bg-white/[0.04]', 'border-gold/30');
-        btn.classList.add('border-transparent');
+        btn.classList.remove('bg-white', 'border-[#324D3E]', 'shadow-md', 'bg-white/[0.04]', 'border-gold/30');
+        btn.classList.add('bg-transparent', 'border-transparent');
         if (numEl) {
-          numEl.classList.remove('text-gold');
-          numEl.classList.add('text-ivory/30');
+          numEl.classList.remove('text-[#324D3E]', 'text-gold');
+          numEl.classList.add('text-[#324D3E]/40');
         }
         if (titleEl) {
-          titleEl.classList.remove('text-gold-light');
-          titleEl.classList.add('text-ivory/70');
+          titleEl.classList.remove('text-[#324D3E]', 'text-gold-light');
+          titleEl.classList.add('text-[#1E2B24]');
         }
         if (arrowEl) {
-          arrowEl.classList.remove('opacity-100', 'translate-x-0');
+          arrowEl.classList.remove('opacity-100', 'translate-x-0', 'text-[#324D3E]');
           arrowEl.classList.add('opacity-0', 'translate-x-2');
         }
         if (cursorLine) {
@@ -2181,23 +2181,23 @@ class LuxuryBranchAtlasController {
       const border = btn.querySelector('.branch-active-border');
 
       if (isActive) {
-        btn.classList.add('bg-[#24231F]/90', 'border-gold/50', 'shadow-xl');
-        btn.classList.remove('bg-transparent', 'border-white/10');
-        if (num) { num.classList.add('text-gold'); num.classList.remove('text-ivory/40'); }
-        if (name) { name.classList.add('text-gold'); name.classList.remove('text-ivory/80'); }
+        btn.classList.add('bg-white', 'border-[#324D3E]', 'shadow-xl', 'ring-2', 'ring-[#324D3E]/20');
+        btn.classList.remove('bg-white/60', 'bg-transparent', 'border-[#324D3E]/10', 'border-white/10');
+        if (num) { num.classList.add('text-[#324D3E]'); num.classList.remove('text-[#324D3E]/40', 'text-ivory/40'); }
+        if (name) { name.classList.add('text-[#324D3E]'); name.classList.remove('text-[#1E2B24]', 'text-ivory/80'); }
         if (indicator) {
-          indicator.classList.add('bg-gold/20', 'border-gold/40', 'text-gold');
-          indicator.classList.remove('bg-white/5', 'border-white/10', 'text-ivory/40');
+          indicator.classList.add('bg-[#324D3E]/10', 'border-[#324D3E]/30', 'text-[#324D3E]');
+          indicator.classList.remove('bg-white', 'border-[#324D3E]/10', 'text-[#324D3E]/40', 'bg-white/5', 'text-ivory/40');
         }
         if (border) { border.classList.remove('opacity-0'); border.classList.add('opacity-100'); }
       } else {
-        btn.classList.remove('bg-[#24231F]/90', 'border-gold/50', 'shadow-xl');
-        btn.classList.add('bg-transparent', 'border-white/10');
-        if (num) { num.classList.remove('text-gold'); num.classList.add('text-ivory/40'); }
-        if (name) { name.classList.remove('text-gold'); name.classList.add('text-ivory/80'); }
+        btn.classList.remove('bg-white', 'border-[#324D3E]', 'shadow-xl', 'ring-2', 'ring-[#324D3E]/20');
+        btn.classList.add('bg-white/60', 'border-[#324D3E]/10');
+        if (num) { num.classList.remove('text-[#324D3E]'); num.classList.add('text-[#324D3E]/40'); }
+        if (name) { name.classList.remove('text-[#324D3E]'); name.classList.add('text-[#1E2B24]'); }
         if (indicator) {
-          indicator.classList.remove('bg-gold/20', 'border-gold/40', 'text-gold');
-          indicator.classList.add('bg-white/5', 'border-white/10', 'text-ivory/40');
+          indicator.classList.remove('bg-[#324D3E]/10', 'border-[#324D3E]/30', 'text-[#324D3E]');
+          indicator.classList.add('bg-white', 'border-[#324D3E]/10', 'text-[#324D3E]/40');
         }
         if (border) { border.classList.remove('opacity-100'); border.classList.add('opacity-0'); }
       }
@@ -2225,12 +2225,12 @@ class LuxuryBranchAtlasController {
           const intlNum = cleanNum.startsWith('0') ? '966' + cleanNum.substring(1) : cleanNum;
           return `
             <div class="inline-flex items-center gap-2">
-              <a href="tel:+${intlNum}" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-gold/20 text-gold-light hover:text-gold border border-gold/30 hover:border-gold flex items-center gap-2 text-xs font-mono font-bold transition-all shadow-sm group" title="اتصال بـ ${branch.name}">
-                <svg class="w-3.5 h-3.5 text-gold group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:+${intlNum}" class="px-3.5 py-2 rounded-xl bg-[#F5F2EB] hover:bg-[#EFE9DF] text-[#324D3E] border border-[#324D3E]/20 hover:border-[#324D3E] flex items-center gap-2 text-xs font-mono font-bold transition-all shadow-sm group" title="اتصال بـ ${branch.name}">
+                <svg class="w-3.5 h-3.5 text-[#324D3E] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 <span>${p.number}</span>
               </a>
-              <a href="https://wa.me/${intlNum}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/60 flex items-center gap-1.5 text-xs font-medium transition-all shadow-sm" aria-label="واتساب ${p.number}">
-                <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.449.741.964 1.2.662.589 1.22.772 1.393.858.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.419-.1.824z"/></svg>
+              <a href="https://wa.me/${intlNum}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 hover:border-emerald-400 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm" aria-label="واتساب ${p.number}">
+                <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.449.741.964 1.2.662.589 1.22.772 1.393.858.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.419-.1.824z"/></svg>
                 <span class="hidden sm:inline">واتساب</span>
               </a>
             </div>
