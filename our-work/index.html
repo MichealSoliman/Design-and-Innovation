@@ -76,16 +76,9 @@
         class="flex items-center gap-2.5 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-xl p-1"
         aria-label="ابتكار وتصميم - الصفحة الرئيسية">
         <div
-          class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#684632] to-[#24231F] border border-gold/40 flex items-center justify-center shadow-lg group-hover:border-gold transition-colors duration-300 shrink-0">
-          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold-light group-hover:scale-105 transition-transform"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 21h18" />
-            <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
-            <path d="M9 7h6" />
-            <path d="M9 11h6" />
-            <path d="M9 15h6" />
-          </svg>
+          class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#684632] to-[#24231F] border border-gold/40 flex items-center justify-center p-1.5 shadow-lg group-hover:border-gold transition-colors duration-300 shrink-0">
+          <img src="../img/logo.png" alt="شعار شركة ابتكار وتصميم"
+            class="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300">
           <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-gold"></div>
         </div>
         <div class="flex flex-col">
@@ -189,14 +182,14 @@
           مصنعنا
         </a>
 
-        <!-- About Page Link -->
+        <!-- Story Page Link -->
         <a href="../about/index.html"
-          class="px-3.5 py-2 text-sm font-semibold text-ivory hover:text-gold transition-colors relative after:absolute after:bottom-1 after:start-3.5 after:end-3.5 after:h-0.5 after:bg-gold after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
-          من نحن
+          class="px-3.5 py-2 text-sm font-medium text-ivory/80 hover:text-gold transition-colors relative after:absolute after:bottom-1 after:start-3.5 after:end-3.5 after:h-0.5 after:bg-gold after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
+          قصتنا
         </a>
 
-        <!-- Contact Section Anchor -->
-        <a href="#contact"
+        <!-- Contact Page Link -->
+        <a href="../contact/index.html"
           class="px-3.5 py-2 text-sm font-medium text-ivory/80 hover:text-gold transition-colors relative after:absolute after:bottom-1 after:start-3.5 after:end-3.5 after:h-0.5 after:bg-gold after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
           تواصل معنا
         </a>
@@ -255,10 +248,8 @@
     <div>
       <div class="flex items-center justify-between pb-5 border-b border-white/10">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-walnut/60 border border-gold/40 flex items-center justify-center text-gold">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h6M9 11h6M9 15h6" />
-            </svg>
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#684632] to-[#24231F] border border-gold/40 flex items-center justify-center p-1 shadow-lg shrink-0">
+            <img src="../img/logo.png" alt="شعار شركة ابتكار وتصميم" class="w-full h-full object-contain filter drop-shadow">
           </div>
           <div>
             <span class="text-xl font-bold text-gold-gradient">ابتكار وتصميم</span>
@@ -293,7 +284,8 @@
         </a>
         <a href="../about/index.html"
           class="px-4 py-3 rounded-xl text-sm font-medium text-ivory/80 hover:text-gold hover:bg-white/5 transition-colors flex items-center justify-between">
-          <span>عن ابتكار وتصميم</span>
+          <span>قصتنا</span>
+          <span class="text-xs text-gold/60">STORY</span>
         </a>
         <a href="#featured-commission"
           class="px-4 py-3 rounded-xl text-sm font-medium text-ivory/80 hover:text-gold hover:bg-white/5 transition-colors flex items-center justify-between">
@@ -315,9 +307,10 @@
           <span>المطابخ الخشبية</span>
           <span class="text-xs text-gold/60">04</span>
         </a>
-        <a href="#contact"
+        <a href="../contact/index.html"
           class="px-4 py-3 rounded-xl text-sm font-medium text-ivory/80 hover:text-gold hover:bg-white/5 transition-colors flex items-center justify-between">
           <span>تواصل معنا</span>
+          <span class="text-xs text-gold/60">CONTACT</span>
         </a>
       </nav>
     </div>
@@ -640,61 +633,11 @@
                   <span class="perspective-showcase-coord">PERSPECTIVE: WIDE ARCHITECTURAL [16:11]</span>
                 </div>
 
-                <!-- ================= HOTSPOTS ON SHOWCASE IMAGE ================= -->
-                <!-- Hotspot 1: Acoustic Slat Headboard -->
-                <div class="hotspot-pin" style="top: 38%; left: 32%;" aria-label="مواصفة التكسيات الجدارية">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل التكسيات الجدارية">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">CRAFT SPEC // 01</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">تكسيات جدارية متصلة</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal mb-2">ألواح خشب جوز أمريكي صلب
-                      مشطوفة بزوايا 45° مع تعشيق ليزري مخفي بدون براغي ظاهرة.</p>
-                    <span
-                      class="inline-block text-[10px] font-mono text-gold-light bg-gold/10 px-2 py-0.5 rounded">SOLID
-                      AMERICAN WALNUT</span>
-                  </div>
-                </div>
 
-                <!-- Hotspot 2: Architectural Cove Lighting -->
-                <div class="hotspot-pin" style="top: 22%; left: 68%;" aria-label="مواصفة الإضاءة المحيطية">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الإضاءة المخفية">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">LIGHTING SPEC // 02</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">مسارات إنارة مدمجة 3000K</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal mb-2">تجاويف مخصصة في الخشب تخفي
-                      شريط الـ LED لمنع التوهج المباشر وخلق دفء بصري متوازن.</p>
-                    <span class="inline-block text-[10px] font-mono text-gold-light bg-gold/10 px-2 py-0.5 rounded">CRI
-                      &gt; 95 / WARM INDIRECT</span>
-                  </div>
-                </div>
 
-                <!-- Hotspot 3: Cantilevered Nightstand Drawer -->
-                <div class="hotspot-pin" style="top: 72%; left: 78%;" aria-label="مواصفة الكومودينو المعلق">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل وحدة السرير الجانبية">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">JOINERY SPEC // 03</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">كومودينو معلق خفي التثبيت</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal mb-2">أدراج بآلية Push-to-Open
-                      هيدروليكية نمساوية ومبطنة بالمخمل الطبيعي لحفظ المقتنيات الثمينة.</p>
-                    <span class="inline-block text-[10px] font-mono text-gold-light bg-gold/10 px-2 py-0.5 rounded">BLUM
-                      MOVENTO SYSTEM</span>
-                  </div>
-                </div>
+
+
+
 
                 <!-- Floating Zoom Indicator Badge -->
                 <div
@@ -810,44 +753,16 @@
           <div
             class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 bg-charcoal aspect-[16/10] sm:aspect-[21/9] min-h-[280px] sm:min-h-[440px] relative shadow-2xl cursor-pointer"
             data-img-src="../img/Bedrooms/Artboard 6.png"
-            data-title="جناح نوم ماستر فاخر بتكسيات خشبية متصلة ولوح رأسي ممتد مع إضاءة خافتة"
-            data-category="غرف النوم"
+            data-title="جناح نوم ماستر فاخر بتكسيات خشبية متصلة ولوح رأسي ممتد مع إضاءة خافتة" data-category="غرف النوم"
             tabindex="0" role="button" aria-label="عرض جناح النوم الماستر الرئيسي">
 
-            <img src="../img/Bedrooms/Artboard 6.png"
-              alt="جناح نوم رئيسي فاخر بتكسيات خشبية متصلة وسرير فندقي عائم"
+            <img src="../img/Bedrooms/Artboard 6.png" alt="جناح نوم رئيسي فاخر بتكسيات خشبية متصلة وسرير فندقي عائم"
               width="1920" height="820" loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-            <!-- Hotspot 1: Headboard Wall Cladding -->
-            <div class="hotspot-pin" style="top: 45%; left: 35%;" aria-label="مواصفة اللوح الرأسي والتكسيات">
-              <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل اللوح الرأسي">
-                <span class="hotspot-pulse-ring"></span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-              <div class="hotspot-popover">
-                <span class="text-[10px] font-mono text-gold block mb-1">HEADBOARD ARCHITECTURE // 01-A</span>
-                <h4 class="text-xs font-bold text-ivory mb-1">لوح رأسي خشبي مع تكسيات جدارية متكاملة</h4>
-                <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">امتداد أفقي من خشب البلوط الطبيعي مع عزل صوتي متكامل وتوزيع ذكي لمسارات الإضاءة الدافئة غير المباشرة.</p>
-              </div>
-            </div>
 
-            <!-- Hotspot 2: Floating Cantilevered Nightstand -->
-            <div class="hotspot-pin" style="top: 68%; left: 75%;" aria-label="مواصفة الكومودينو المعلق">
-              <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الكومودينو">
-                <span class="hotspot-pulse-ring"></span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-              <div class="hotspot-popover">
-                <span class="text-[10px] font-mono text-gold block mb-1">CANTILEVERED NIGHTSTAND</span>
-                <h4 class="text-xs font-bold text-ivory mb-1">كومودينو معلق بنظام Blum النمساوي</h4>
-                <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">سحّابات مخفية هيدروليكية بآلية إغلاق ناعمة ومفصلات مقاومة للاهتزاز والضغط.</p>
-              </div>
-            </div>
+
+
 
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -856,9 +771,12 @@
             <div
               class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 sm:gap-4">
               <div>
-                <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">SIGNATURE MASTER SUITE // 01-A</span>
-                <h3 class="text-lg sm:text-2xl font-bold text-ivory">جناح نوم ماستر معماري بتكسيات متصلة ووحدات معلقة</h3>
-                <p class="text-xs text-ivory/70 mt-1 max-w-xl">تناغم دافئ بين الخشب الطبيعي وإضاءة الـ LED المخفية لخلق فضاء سكني فندقي هادئ</p>
+                <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">SIGNATURE
+                  MASTER SUITE // 01-A</span>
+                <h3 class="text-lg sm:text-2xl font-bold text-ivory">جناح نوم ماستر معماري بتكسيات متصلة ووحدات معلقة
+                </h3>
+                <p class="text-xs text-ivory/70 mt-1 max-w-xl">تناغم دافئ بين الخشب الطبيعي وإضاءة الـ LED المخفية لخلق
+                  فضاء سكني فندقي هادئ</p>
               </div>
               <div
                 class="zoom-indicator px-3.5 sm:px-4 py-2 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs font-bold text-gold shrink-0">
@@ -874,23 +792,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 2.png"
-              data-title="غرفة نوم فندقية حديثة مع خلفية سرير مخملية محاطة بشرائح خشبية مضلعة"
-              data-category="غرف النوم"
+              data-title="غرفة نوم فندقية حديثة مع خلفية سرير مخملية محاطة بشرائح خشبية مضلعة" data-category="غرف النوم"
               tabindex="0" role="button" aria-label="عرض غرفة النوم الفندقية بتكسيات الشرائح">
 
-              <img src="../img/Bedrooms/Artboard 2.png"
-                alt="غرفة نوم مودرن بخلفية خشبية وتنجيد قماشي راقٍ"
-                width="900" height="560" loading="lazy"
+              <img src="../img/Bedrooms/Artboard 2.png" alt="غرفة نوم مودرن بخلفية خشبية وتنجيد قماشي راقٍ" width="900"
+                height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">HOTEL SUITE // 01-B</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">HOTEL SUITE //
+                    01-B</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">جناح نوم بتكسيات شريحية وإضاءة خطية غاطسة</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">سرير منجد مدمج مع لوح رأسي ممتد لكامل الحائط</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">سرير منجد مدمج مع لوح رأسي ممتد لكامل
+                    الحائط</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -900,23 +819,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 8.png"
-              data-title="تصميم غرفة نوم ماستر مع منطقة تسريحة مدمجة وتكسيات خشب الجوز"
-              data-category="غرف النوم"
+              data-title="تصميم غرفة نوم ماستر مع منطقة تسريحة مدمجة وتكسيات خشب الجوز" data-category="غرف النوم"
               tabindex="0" role="button" aria-label="عرض غرفة النوم وتكسيات خشب الجوز">
 
-              <img src="../img/Bedrooms/Artboard 8.png"
-                alt="تصميم غرفة نوم فخمة بخشب الجوز الدافئ وإضاءة محيطية"
+              <img src="../img/Bedrooms/Artboard 8.png" alt="تصميم غرفة نوم فخمة بخشب الجوز الدافئ وإضاءة محيطية"
                 width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">WARM WALNUT // 01-C</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">WARM WALNUT //
+                    01-C</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">غرفة نوم ماستر بدرجات خشب الجوز الدافئ</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">تناسق معماري بين السرير والجدار الديكوري والكومودينو</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">تناسق معماري بين السرير والجدار الديكوري
+                    والكومودينو</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -926,23 +846,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 11.png"
-              data-title="غرفة نوم معاصرة بألواح خشبية عمودية ووحدات تخزين سريرية مدمجة"
-              data-category="غرف النوم"
+              data-title="غرفة نوم معاصرة بألواح خشبية عمودية ووحدات تخزين سريرية مدمجة" data-category="غرف النوم"
               tabindex="0" role="button" aria-label="عرض غرفة النوم المعاصرة">
 
-              <img src="../img/Bedrooms/Artboard 11.png"
-                alt="غرفة نوم حديثة بخلفية خشبية رمادية مدمجة"
-                width="900" height="560" loading="lazy"
+              <img src="../img/Bedrooms/Artboard 11.png" alt="غرفة نوم حديثة بخلفية خشبية رمادية مدمجة" width="900"
+                height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">MODERN MINIMAL // 01-D</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">MODERN MINIMAL //
+                    01-D</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">غرفة نوم مينيمال بتوزيع هندسي متزن</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">خلفية خشبية عريضة مع تجاويف إضاءة مخفية وقاعدة سرير عائمة</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">خلفية خشبية عريضة مع تجاويف إضاءة مخفية
+                    وقاعدة سرير عائمة</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -952,23 +873,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 15.png"
-              data-title="جناح نوم واسع بدمج خامات الخشب والرخام ووحدات الإنارة المعلقة"
-              data-category="غرف النوم"
+              data-title="جناح نوم واسع بدمج خامات الخشب والرخام ووحدات الإنارة المعلقة" data-category="غرف النوم"
               tabindex="0" role="button" aria-label="عرض جناح النوم بالخشب والرخام">
 
-              <img src="../img/Bedrooms/Artboard 15.png"
-                alt="جناح نوم فسيح يجمع بين الخشب الطبيعي وتطعيمات الرخام"
+              <img src="../img/Bedrooms/Artboard 15.png" alt="جناح نوم فسيح يجمع بين الخشب الطبيعي وتطعيمات الرخام"
                 width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">CONTEMPORARY LUXE // 01-E</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">CONTEMPORARY LUXE //
+                    01-E</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">جناح متكامل بتطعيمات رخامية وخشبية</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">طاولات جانبية مدمجة ولوح خلفي متعدد الطبقات والخامات</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">طاولات جانبية مدمجة ولوح خلفي متعدد
+                    الطبقات والخامات</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -983,19 +905,18 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 7.png"
-              data-title="غرفة نوم هادئة بألوان حيادية وتكسيات خشبية رأسية"
-              data-category="غرف النوم"
-              tabindex="0" role="button" aria-label="عرض غرفة النوم بألوان حيادية">
+              data-title="غرفة نوم هادئة بألوان حيادية وتكسيات خشبية رأسية" data-category="غرف النوم" tabindex="0"
+              role="button" aria-label="عرض غرفة النوم بألوان حيادية">
 
-              <img src="../img/Bedrooms/Artboard 7.png"
-                alt="تصميم غرفة نوم مريحة بدرجات لونية متناسقة"
-                width="700" height="480" loading="lazy"
+              <img src="../img/Bedrooms/Artboard 7.png" alt="تصميم غرفة نوم مريحة بدرجات لونية متناسقة" width="700"
+                height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 01-F</span>
                   <p class="text-sm font-bold text-ivory">غرفة نوم هادئة بنقوش خشبية طبيعية</p>
@@ -1008,19 +929,18 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Artboard 12.png"
-              data-title="سرير خشبي متصل ببانوهات جدارية وقواطع معمارية خفيفة"
-              data-category="غرف النوم"
-              tabindex="0" role="button" aria-label="عرض السرير الخشبي والبانوهات الجدارية">
+              data-title="سرير خشبي متصل ببانوهات جدارية وقواطع معمارية خفيفة" data-category="غرف النوم" tabindex="0"
+              role="button" aria-label="عرض السرير الخشبي والبانوهات الجدارية">
 
-              <img src="../img/Bedrooms/Artboard 12.png"
-                alt="سرير خشبي حديث مدمج مع بانوهات جدارية وقواطع"
-                width="700" height="480" loading="lazy"
+              <img src="../img/Bedrooms/Artboard 12.png" alt="سرير خشبي حديث مدمج مع بانوهات جدارية وقواطع" width="700"
+                height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 01-G</span>
                   <p class="text-sm font-bold text-ivory">بانوهات جدارية وقواطع سريرية متناسقة</p>
@@ -1033,19 +953,18 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/Bedrooms/Warm Modern Bedroom Retreat.png"
-              data-title="ملاذ نوم دافئ يجمع بين الأخشاب المعالجة والخطوط المعمارية النظيفة"
-              data-category="غرف النوم"
+              data-title="ملاذ نوم دافئ يجمع بين الأخشاب المعالجة والخطوط المعمارية النظيفة" data-category="غرف النوم"
               tabindex="0" role="button" aria-label="عرض ملاذ النوم الدافئ">
 
               <img src="../img/Bedrooms/Warm Modern Bedroom Retreat.png"
-                alt="غرفة نوم دافئة بتصميم معماري نظيف وخشب طبيعي"
-                width="700" height="480" loading="lazy"
+                alt="غرفة نوم دافئة بتصميم معماري نظيف وخشب طبيعي" width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 01-H</span>
                   <p class="text-sm font-bold text-ivory">ملاذ نوم دافئ بخطوط معمارية ناعمة</p>
@@ -1085,7 +1004,8 @@
               <span class="text-xs text-ivory/90">خشب الجوز الداكن + إضاءة سمارت + زجاج فوميه</span>
             </div>
             <p class="text-xs sm:text-sm text-ivory/70 max-w-md text-justify sm:text-right">
-              تصميمات حصرية لغرف الملابس المفتوحة (Walk-in Closets) والخزائن الذكية التي توفر استغلالاً هندسياً فائقاً للارتفاعات مع أرقى الإكسسوارات الداخلية.
+              تصميمات حصرية لغرف الملابس المفتوحة (Walk-in Closets) والخزائن الذكية التي توفر استغلالاً هندسياً فائقاً
+              للارتفاعات مع أرقى الإكسسوارات الداخلية.
             </p>
           </div>
         </div>
@@ -1102,28 +1022,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 bg-charcoal h-full min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] relative shadow-2xl cursor-pointer"
                 data-img-src="../img/dressing-room/Gemini_Generated_Image_3xjkxg3xjkxg3xjk.jpg.jpeg"
                 data-title="غرفة ملابس فاخرة كاملة الارتفاع بإضاءة بروفايل طولية وأرفف زجاجية عاكسة"
-                data-category="غرف الملابس والخزائن"
-                tabindex="0" role="button" aria-label="عرض غرفة الملابس كاملة الارتفاع">
+                data-category="غرف الملابس والخزائن" tabindex="0" role="button"
+                aria-label="عرض غرفة الملابس كاملة الارتفاع">
 
                 <img src="../img/dressing-room/Gemini_Generated_Image_3xjkxg3xjkxg3xjk.jpg.jpeg"
-                  alt="خزانة ملابس مفتوحة بإضاءة بروفايل طولية وتقسيمات هندسية راقية"
-                  width="1000" height="1350" loading="lazy"
+                  alt="خزانة ملابس مفتوحة بإضاءة بروفايل طولية وتقسيمات هندسية راقية" width="1000" height="1350"
+                  loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Vertical Smart LED -->
-                <div class="hotspot-pin" style="top: 32%; left: 45%;" aria-label="مواصفة الإضاءة الذكية">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الإنارة المدمجة">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">SMART PROFILE LED</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">مسارات إنارة طولية بمستشعر ذكي</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">خطوط إضاءة 3000K دافئة مدمجة بالهيكل الخشبي لإبراز ألوان الملابس والمقتنيات.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none">
@@ -1132,9 +1039,12 @@
                 <div
                   class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-4">
                   <div>
-                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">BESPOKE TOWER // 02-A</span>
-                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">برج ملابس متكامل بكامل الارتفاع المعماري</h3>
-                    <p class="text-xs text-ivory/60 mt-0.5">تقسيمات داخلية للأزياء الطويلة والقصيرة مع رفوف علوية للحقائب</p>
+                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">BESPOKE
+                      TOWER // 02-A</span>
+                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">برج ملابس متكامل بكامل الارتفاع
+                      المعماري</h3>
+                    <p class="text-xs text-ivory/60 mt-0.5">تقسيمات داخلية للأزياء الطويلة والقصيرة مع رفوف علوية
+                      للحقائب</p>
                   </div>
                   <div
                     class="zoom-indicator px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
@@ -1150,28 +1060,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal h-full min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] relative shadow-2xl transition-all duration-300 cursor-pointer"
                 data-img-src="../img/dressing-room/Gemini_Generated_Image_epljefepljefeplj.jpg.jpeg"
                 data-title="جناح دريسنج روم Walk-In واسع بجزيرة إكسسوارات وساعات وسطية وخزائن زجاجية"
-                data-category="غرف الملابس والخزائن"
-                tabindex="0" role="button" aria-label="عرض جناح الدريسنج روم الواسع">
+                data-category="غرف الملابس والخزائن" tabindex="0" role="button"
+                aria-label="عرض جناح الدريسنج روم الواسع">
 
                 <img src="../img/dressing-room/Gemini_Generated_Image_epljefepljefeplj.jpg.jpeg"
-                  alt="غرفة ملابس ماستر بجزيرة وسطية وأدراج عرض الساعات المبطنة بالمخمل"
-                  width="1400" height="950" loading="lazy"
+                  alt="غرفة ملابس ماستر بجزيرة وسطية وأدراج عرض الساعات المبطنة بالمخمل" width="1400" height="950"
+                  loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Central Island Showcase -->
-                <div class="hotspot-pin" style="top: 65%; left: 48%;" aria-label="مواصفة جزيرة الإكسسوارات">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل جزيرة الإكسسوارات">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">ACCESSORIES ISLAND</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">جزيرة ساعات ومجوهرات زجاجية</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">سطح زجاجي شفاف ومقاوم للخدش مع أدراج مقسمة يدويًا مبطنة بالمخمل الإيطالي الطبيعي.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1180,9 +1077,12 @@
                 <div
                   class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 sm:gap-4">
                   <div>
-                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">WALK-IN MASTER SUITE // 02-B</span>
-                    <h3 class="text-lg sm:text-2xl font-bold text-ivory">جناح دريسنج روم متكامل بجزيرة مجوهرات مركزية</h3>
-                    <p class="text-xs text-ivory/70 mt-1 max-w-lg">خزائن محيطية متصلة بالكامل مع رفوف أحذية مائلة وإضاءات موجهة</p>
+                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">WALK-IN
+                      MASTER SUITE // 02-B</span>
+                    <h3 class="text-lg sm:text-2xl font-bold text-ivory">جناح دريسنج روم متكامل بجزيرة مجوهرات مركزية
+                    </h3>
+                    <p class="text-xs text-ivory/70 mt-1 max-w-lg">خزائن محيطية متصلة بالكامل مع رفوف أحذية مائلة
+                      وإضاءات موجهة</p>
                   </div>
                   <div
                     class="zoom-indicator px-3.5 sm:px-4 py-2 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs font-bold text-gold shrink-0">
@@ -1202,22 +1102,24 @@
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/dressing-room/Gemini_Generated_Image_a5841ka5841ka584.jpg.jpeg"
               data-title="خزائن ملابس بأبواب زجاجية مصفحة باللون الدخاني مع إطارات ألومنيوم نحاسية"
-              data-category="غرف الملابس والخزائن"
-              tabindex="0" role="button" aria-label="عرض الخزانة ذات الأبواب الزجاجية الفوميه">
+              data-category="غرف الملابس والخزائن" tabindex="0" role="button"
+              aria-label="عرض الخزانة ذات الأبواب الزجاجية الفوميه">
 
               <img src="../img/dressing-room/Gemini_Generated_Image_a5841ka5841ka584.jpg.jpeg"
-                alt="خزانة ملابس بأبواب زجاجية عاكسة وإطارات ألومنيوم رفيعة"
-                width="900" height="560" loading="lazy"
+                alt="خزانة ملابس بأبواب زجاجية عاكسة وإطارات ألومنيوم رفيعة" width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">SMOKED GLASS DOORS // 02-C</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">SMOKED GLASS DOORS //
+                    02-C</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">خزائن زجاجية دخانية بإطارات نحاسية عصرية</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">حماية تامة من الغبار مع لمسة عرض فاخرة ومفصلات إغلاق ناعم</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">حماية تامة من الغبار مع لمسة عرض فاخرة
+                    ومفصلات إغلاق ناعم</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1228,22 +1130,26 @@
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/dressing-room/Gemini_Generated_Image_kza7hjkza7hjkza7.jpg.jpeg"
               data-title="غرفة ملابس خشبية مفتوحة بدرجات الخشب الداكن والإضاءة الخلفية الدافئة"
-              data-category="غرف الملابس والخزائن"
-              tabindex="0" role="button" aria-label="عرض غرفة الملابس بالخشب الداكن">
+              data-category="غرف الملابس والخزائن" tabindex="0" role="button"
+              aria-label="عرض غرفة الملابس بالخشب الداكن">
 
               <img src="../img/dressing-room/Gemini_Generated_Image_kza7hjkza7hjkza7.jpg.jpeg"
-                alt="غرفة ملابس خشبية فخمة بأقسام منظمة للأحذية والحقائب والبدلات"
-                width="900" height="560" loading="lazy"
+                alt="غرفة ملابس خشبية فخمة بأقسام منظمة للأحذية والحقائب والبدلات" width="900" height="560"
+                loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">MODULAR ARCHITECTURE // 02-D</span>
-                  <p class="text-sm sm:text-base font-bold text-ivory">تنسيق متقن للأقسام المفتوحة والشماعات الهيدروليكية</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أنظمة سحب سلسة تمنح سهولة الوصول لكافة مستويات الخزانة</p>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">MODULAR ARCHITECTURE //
+                    02-D</span>
+                  <p class="text-sm sm:text-base font-bold text-ivory">تنسيق متقن للأقسام المفتوحة والشماعات
+                    الهيدروليكية</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أنظمة سحب سلسة تمنح سهولة الوصول لكافة
+                    مستويات الخزانة</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1259,18 +1165,17 @@
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg"
               data-title="وحدة عرض أحذية وحقائب بإضاءة رفوف مستقلة وحواجز أمان زجاجية"
-              data-category="غرف الملابس والخزائن"
-              tabindex="0" role="button" aria-label="عرض وحدة الأحذية والحقائب">
+              data-category="غرف الملابس والخزائن" tabindex="0" role="button" aria-label="عرض وحدة الأحذية والحقائب">
 
               <img src="../img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg"
-                alt="وحدة رفوف خشبية متدرجة لحفظ الأحذية والحقائب بإضاءة ممتازة"
-                width="700" height="480" loading="lazy"
+                alt="وحدة رفوف خشبية متدرجة لحفظ الأحذية والحقائب بإضاءة ممتازة" width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 02-E</span>
                   <p class="text-sm font-bold text-ivory">وحدات متخصصة للأحذية والحقائب</p>
@@ -1284,18 +1189,17 @@
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/dressing-room/Gemini_Generated_Image_qgh4d6qgh4d6qgh4.jpg.jpeg"
               data-title="ركن ارتداء ملابس مدمج مع مرآة ذكية بإضاءة محيطية وأدراج مخفية"
-              data-category="غرف الملابس والخزائن"
-              tabindex="0" role="button" aria-label="عرض ركن الدريسنج مع المرآة">
+              data-category="غرف الملابس والخزائن" tabindex="0" role="button" aria-label="عرض ركن الدريسنج مع المرآة">
 
               <img src="../img/dressing-room/Gemini_Generated_Image_qgh4d6qgh4d6qgh4.jpg.jpeg"
-                alt="ركن دريسنج مميز بمرآة كاملة وأرفف منسجمة"
-                width="700" height="480" loading="lazy"
+                alt="ركن دريسنج مميز بمرآة كاملة وأرفف منسجمة" width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 02-F</span>
                   <p class="text-sm font-bold text-ivory">ركن ارتداء متصل بمرآة كاملة ذكية</p>
@@ -1309,18 +1213,17 @@
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer"
               data-img-src="../img/dressing-room/Gemini_Generated_Image_levl3klevl3klevl.jpg.jpeg"
               data-title="خزانة خشبية بتشطيب البلوط الفاتح وخطوط ناعمة تناسب الغرف العصرية"
-              data-category="غرف الملابس والخزائن"
-              tabindex="0" role="button" aria-label="عرض خزانة البلوط الفاتح">
+              data-category="غرف الملابس والخزائن" tabindex="0" role="button" aria-label="عرض خزانة البلوط الفاتح">
 
               <img src="../img/dressing-room/Gemini_Generated_Image_levl3klevl3klevl.jpg.jpeg"
-                alt="خزانة ملابس عصرية بخشب البلوط الطبيعي وتصميم بسيط"
-                width="700" height="480" loading="lazy"
+                alt="خزانة ملابس عصرية بخشب البلوط الطبيعي وتصميم بسيط" width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
                   <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STUDY // 02-G</span>
                   <p class="text-sm font-bold text-ivory">خزانة خشبية معاصرة بتشطيب طبيعي</p>
@@ -1377,43 +1280,17 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 bg-charcoal h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] relative shadow-2xl transition-all duration-300 cursor-pointer"
                 data-img-src="../img/Hairstyles/Gemini_Generated_Image_fd0fo0fd0fo0fd0f.jpg.jpeg"
                 data-title="تسريحة هوليوود المعمارية الفاخرة المدمجة بخزائن الجوز وأرفف دائرية"
-                data-category="التسريحات ووحدات المكياج"
-                tabindex="0" role="button" aria-label="عرض تسريحة هوليوود الفاخرة المدمجة بخزائن الجوز">
+                data-category="التسريحات ووحدات المكياج" tabindex="0" role="button"
+                aria-label="عرض تسريحة هوليوود الفاخرة المدمجة بخزائن الجوز">
 
                 <img src="../img/Hairstyles/Gemini_Generated_Image_fd0fo0fd0fo0fd0f.jpg.jpeg"
-                  alt="تسريحة هوليوود المعمارية الفاخرة بإضاءة استوديو محيطية وأرفف خشبية دائرية"
-                  width="1232" height="864" loading="lazy"
+                  alt="تسريحة هوليوود المعمارية الفاخرة بإضاءة استوديو محيطية وأرفف خشبية دائرية" width="1232"
+                  height="864" loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot 1: Hollywood Studio Bulbs -->
-                <div class="hotspot-pin" style="top: 38%; left: 48%;" aria-label="مواصفة إضاءة هوليوود">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل إضاءة الاستوديو">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">HOLLYWOOD LIGHTING // 03-A</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">إضاءة استوديو متوازنة خالية من الظلال</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">مصابيح دائرية مدمجة باحترافية توفر إضاءة 4000K نهارية متوازنة تضمن دقة مطلقة عند الاستخدام والتزيين.</p>
-                  </div>
-                </div>
 
-                <!-- Hotspot 2: Curved Display Shelves -->
-                <div class="hotspot-pin" style="top: 42%; left: 82%;" aria-label="مواصفة الأرفف الدائرية">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الأرفف المنحنية">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">CURVED SHELVING</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">أرفف منحوتة دائرية للعطور</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">أرفف جانبية نصف دائرية من خشب الجوز الطبيعي مخصصة لعرض قوارير العطور والمستحضرات بأناقة متناهية.</p>
-                  </div>
-                </div>
+
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1422,9 +1299,12 @@
                 <div
                   class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-4">
                   <div>
-                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">VANITY ATELIER // 03-A</span>
-                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">تسريحة هوليوود المعمارية المدمجة بخزائن الجوز</h3>
-                    <p class="text-xs text-ivory/60 mt-0.5">دمج احترافي بين إضاءة الاستوديو ووحدات الأدراج التخزينية وأرفف العرض الدائرية</p>
+                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">VANITY
+                      ATELIER // 03-A</span>
+                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">تسريحة هوليوود المعمارية المدمجة بخزائن
+                      الجوز</h3>
+                    <p class="text-xs text-ivory/60 mt-0.5">دمج احترافي بين إضاءة الاستوديو ووحدات الأدراج التخزينية
+                      وأرفف العرض الدائرية</p>
                   </div>
                   <div
                     class="zoom-indicator px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
@@ -1440,28 +1320,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] relative shadow-2xl transition-all duration-300 cursor-pointer"
                 data-img-src="../img/Hairstyles/Gemini_Generated_Image_9559459559459559.jpg.jpeg"
                 data-title="نيش تسريحة مدمج داخل جناح الدريسنج روم بأبراج أرفف طولية مضيئة"
-                data-category="التسريحات ووحدات المكياج"
-                tabindex="0" role="button" aria-label="عرض نيش تسريحة الدريسنج روم المدمج">
+                data-category="التسريحات ووحدات المكياج" tabindex="0" role="button"
+                aria-label="عرض نيش تسريحة الدريسنج روم المدمج">
 
                 <img src="../img/Hairstyles/Gemini_Generated_Image_9559459559459559.jpg.jpeg"
-                  alt="نيش تسريحة مدمج داخل غرفة الملابس بأبراج أرفف طولية وإضاءة خطية دافئة"
-                  width="1232" height="864" loading="lazy"
+                  alt="نيش تسريحة مدمج داخل غرفة الملابس بأبراج أرفف طولية وإضاءة خطية دافئة" width="1232" height="864"
+                  loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Vertical Smart Profile LED -->
-                <div class="hotspot-pin" style="top: 30%; left: 24%;" aria-label="مواصفة الإضاءة الطولية">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الإضاءة الطولية">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">VERTICAL LIGHT PROFILE</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">خطوط إضاءة طولية مدمجة</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">مسارات إنارة عمودية خفية مدمجة بالهيكل الخشبي لإبراز جمال الخشب وعكس تفاصيل غرفة الملابس.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1470,9 +1337,11 @@
                 <div
                   class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-4">
                   <div>
-                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">DRESSING NICHE // 03-B</span>
+                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">DRESSING
+                      NICHE // 03-B</span>
                     <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">نيش تسريحة مدمج بجناح الدريسنج روم</h3>
-                    <p class="text-xs text-ivory/60 mt-0.5">أبراج أرفف طولية مضيئة وسطح خشبي عريض مع انعكاس فاخر للخزائن الزجاجية</p>
+                    <p class="text-xs text-ivory/60 mt-0.5">أبراج أرفف طولية مضيئة وسطح خشبي عريض مع انعكاس فاخر للخزائن
+                      الزجاجية</p>
                   </div>
                   <div
                     class="zoom-indicator px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
@@ -1493,28 +1362,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
                 data-img-src="../img/Hairstyles/Gemini_Generated_Image_o8avkvo8avkvo8av.jpg.jpeg"
                 data-title="تسريحة معمارية مودرن بمرآة مقوسة Arched Halo Mirror مع رفوف جدارية عائمة"
-                data-category="التسريحات ووحدات المكياج"
-                tabindex="0" role="button" aria-label="عرض تسريحة المرآة المقوسة المودرن">
+                data-category="التسريحات ووحدات المكياج" tabindex="0" role="button"
+                aria-label="عرض تسريحة المرآة المقوسة المودرن">
 
                 <img src="../img/Hairstyles/Gemini_Generated_Image_o8avkvo8avkvo8av.jpg.jpeg"
-                  alt="تسريحة مودرن بمرآة مقوسة معمارية بإضاءة هالو نيون دافئة وأرفف عائمة"
-                  width="1232" height="864" loading="lazy"
+                  alt="تسريحة مودرن بمرآة مقوسة معمارية بإضاءة هالو نيون دافئة وأرفف عائمة" width="1232" height="864"
+                  loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Arched Halo Light -->
-                <div class="hotspot-pin" style="top: 28%; left: 32%;" aria-label="مواصفة المرآة المقوسة">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل المرآة المقوسة">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">ARCHED HALO</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">مرآة مقوسة بإطار هالو نيون</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">قوس معماري بإنارة هالو متصلة يعطي إحساساً بالفخامة والاتساع البصري داخل الغرفة.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1523,7 +1379,8 @@
                 <div
                   class="absolute bottom-4 sm:bottom-5 start-4 sm:start-5 end-4 sm:end-5 flex items-end justify-between gap-3">
                   <div>
-                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">ARCHED HALO // 03-C</span>
+                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">ARCHED HALO //
+                      03-C</span>
                     <h3 class="text-sm sm:text-base font-bold text-ivory mt-0.5">تسريحة مودرن بمرآة مقوسة معمارية</h3>
                     <p class="text-[11px] text-ivory/60 mt-0.5">رفوف جدارية عائمة ووحدة أدراج منسدلة بلون بيج راقٍ</p>
                   </div>
@@ -1541,28 +1398,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
                 data-img-src="../img/Hairstyles/Gemini_Generated_Image_1wq8of1wq8of1wq8.jpg.jpeg"
                 data-title="تسريحة معلقة متصلة بدولاب الملابس الماستر مع مرآة كاملة الارتفاع"
-                data-category="التسريحات ووحدات المكياج"
-                tabindex="0" role="button" aria-label="عرض التسريحة المعلقة المتصلة بالدولاب">
+                data-category="التسريحات ووحدات المكياج" tabindex="0" role="button"
+                aria-label="عرض التسريحة المعلقة المتصلة بالدولاب">
 
                 <img src="../img/Hairstyles/Gemini_Generated_Image_1wq8of1wq8of1wq8.jpg.jpeg"
-                  alt="تسريحة معلقة مدمجة مباشرة مع خزانة الملابس ومرآة كاملة الارتفاع بإضاءة ليد مخفية"
-                  width="1232" height="864" loading="lazy"
+                  alt="تسريحة معلقة مدمجة مباشرة مع خزانة الملابس ومرآة كاملة الارتفاع بإضاءة ليد مخفية" width="1232"
+                  height="864" loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Integrated Backlit Mirror -->
-                <div class="hotspot-pin" style="top: 24%; left: 66%;" aria-label="مواصفة المرآة الممتدة">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل المرآة الممتدة">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">INTEGRATED BACKLIT</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">مرآة كاملة الارتفاع بإنارة محيطية</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">امتداد رأسي بكامل ارتفاع الجدار يمنح رحابة وتناغماً تاماً مع قواطع الخزانة الخشبية المجاورة.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1571,9 +1415,11 @@
                 <div
                   class="absolute bottom-4 sm:bottom-5 start-4 sm:start-5 end-4 sm:end-5 flex items-end justify-between gap-3">
                   <div>
-                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">INTEGRATED // 03-D</span>
+                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">INTEGRATED //
+                      03-D</span>
                     <h3 class="text-sm sm:text-base font-bold text-ivory mt-0.5">تسريحة معلقة متصلة بخزانة الملابس</h3>
-                    <p class="text-[11px] text-ivory/60 mt-0.5">استغلال هندسي ذكي للمساحة مع مرآة كاملة الارتفاع وإنارة دافئة</p>
+                    <p class="text-[11px] text-ivory/60 mt-0.5">استغلال هندسي ذكي للمساحة مع مرآة كاملة الارتفاع وإنارة
+                      دافئة</p>
                   </div>
                   <div
                     class="zoom-indicator px-2.5 sm:px-3 py-1 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-[11px] text-gold shrink-0">
@@ -1589,28 +1435,15 @@
                 class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
                 data-img-src="../img/Hairstyles/Gemini_Generated_Image_ypdtffypdtffypdt.jpg.jpeg"
                 data-title="تسريحة غرفة نوم متكاملة ببرج أرفف جانبي مضيء ووحدة كومودينو متناسقة"
-                data-category="التسريحات ووحدات المكياج"
-                tabindex="0" role="button" aria-label="عرض تسريحة غرفة النوم ببرج الأرفف المضيء">
+                data-category="التسريحات ووحدات المكياج" tabindex="0" role="button"
+                aria-label="عرض تسريحة غرفة النوم ببرج الأرفف المضيء">
 
                 <img src="../img/Hairstyles/Gemini_Generated_Image_ypdtffypdtffypdt.jpg.jpeg"
-                  alt="تسريحة غرفة نوم راقية ببرج أرفف جانبي مضيء ومرآة ليد وكومودينو متناسق"
-                  width="1232" height="864" loading="lazy"
+                  alt="تسريحة غرفة نوم راقية ببرج أرفف جانبي مضيء ومرآة ليد وكومودينو متناسق" width="1232" height="864"
+                  loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-                <!-- Hotspot: Illuminated Tower Shelves -->
-                <div class="hotspot-pin" style="top: 35%; left: 35%;" aria-label="مواصفة برج الأرفف المضيء">
-                  <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل برج الأرفف">
-                    <span class="hotspot-pulse-ring"></span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                  <div class="hotspot-popover">
-                    <span class="text-[10px] font-mono text-gold block mb-1">LIGHTED TOWER</span>
-                    <h4 class="text-xs font-bold text-ivory mb-1">برج أرفف جانبي بإنارة مخفية</h4>
-                    <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">خانات رأسية مصقولة بإضاءة موجهة لعرض المقتنيات الثمينة مع سهولة الوصول اليومي بجوار السرير.</p>
-                  </div>
-                </div>
+
 
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1619,9 +1452,11 @@
                 <div
                   class="absolute bottom-4 sm:bottom-5 start-4 sm:start-5 end-4 sm:end-5 flex items-end justify-between gap-3">
                   <div>
-                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">BEDSIDE TOWER // 03-E</span>
+                    <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">BEDSIDE TOWER //
+                      03-E</span>
                     <h3 class="text-sm sm:text-base font-bold text-ivory mt-0.5">تسريحة متكاملة ببرج أرفف مضيء</h3>
-                    <p class="text-[11px] text-ivory/60 mt-0.5">مرآة بإطار LED نقي ووحدة كومودينو متناسقة وأدراج هيدروليكية</p>
+                    <p class="text-[11px] text-ivory/60 mt-0.5">مرآة بإطار LED نقي ووحدة كومودينو متناسقة وأدراج
+                      هيدروليكية</p>
                   </div>
                   <div
                     class="zoom-indicator px-2.5 sm:px-3 py-1 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-[11px] text-gold shrink-0">
@@ -1661,7 +1496,8 @@
               <span class="text-xs text-ivory/90">خشب الجوز والبلوط المعالج + رخام وبورسلان</span>
             </div>
             <p class="text-xs sm:text-sm text-ivory/70 max-w-md text-justify sm:text-right">
-              استكشف نماذج المطابخ وتنسيق الوحدات والخامات وتوزيع التفاصيل، حيث يلتقي خشب البلوط والجوز بالرخام والأسطح الحجرية في مساحات طهي متكاملة وملهمة.
+              استكشف نماذج المطابخ وتنسيق الوحدات والخامات وتوزيع التفاصيل، حيث يلتقي خشب البلوط والجوز بالرخام والأسطح
+              الحجرية في مساحات طهي متكاملة وملهمة.
             </p>
           </div>
         </div>
@@ -1673,44 +1509,16 @@
           <div
             class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 bg-charcoal aspect-[16/10] sm:aspect-[21/9] min-h-[280px] sm:min-h-[440px] relative shadow-2xl"
             data-img-src="../img/kitchen/Artboard 6.png"
-            data-title="مطبخ مودرن بجزيرة رخامية وطاولة طعام خشبية مدمجة وتكسيات مضلعة" 
-            data-category="المطابخ الخشبية"
+            data-title="مطبخ مودرن بجزيرة رخامية وطاولة طعام خشبية مدمجة وتكسيات مضلعة" data-category="المطابخ الخشبية"
             tabindex="0" role="button" aria-label="عرض المطبخ الخشبي البانورامي الرئيسي">
 
             <img src="../img/kitchen/Artboard 6.png"
-              alt="مطبخ خشبي حديث بجزيرة رخامية وطاولة طعام ممتدة وخزائن رمادية داكنة" 
-              width="1920" height="820" loading="lazy"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              alt="مطبخ خشبي حديث بجزيرة رخامية وطاولة طعام ممتدة وخزائن رمادية داكنة" width="1920" height="820"
+              loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-            <!-- Hotspot 1: Central Island & Dining Extension -->
-            <div class="hotspot-pin" style="top: 65%; left: 35%;" aria-label="مواصفة الجزيرة وطاولة الطعام">
-              <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل جزيرة المطبخ">
-                <span class="hotspot-pulse-ring"></span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-              <div class="hotspot-popover">
-                <span class="text-[10px] font-mono text-gold block mb-1">ISLAND ARCHITECTURE // 04-A</span>
-                <h4 class="text-xs font-bold text-ivory mb-1">جزيرة رخامية مدمجة بطاولة طعام خشبية</h4>
-                <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">امتداد خشبي هندسي من خشب الجوز يوفر مساحة جلوس متصلة بالجزيرة مع عزل مائي نانوي وحواف معمارية مشطوفة.</p>
-              </div>
-            </div>
 
-            <!-- Hotspot 2: Fluted Wall Cladding & Backlit Niche -->
-            <div class="hotspot-pin" style="top: 30%; left: 75%;" aria-label="مواصفة التكسيات والنيش">
-              <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل التكسيات الجدارية">
-                <span class="hotspot-pulse-ring"></span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-              <div class="hotspot-popover">
-                <span class="text-[10px] font-mono text-gold block mb-1">FLUTED WALL & AMBIENT LED</span>
-                <h4 class="text-xs font-bold text-ivory mb-1">تكسيات مضلعة وأرفف خشبية دافئة</h4>
-                <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">تكسيات جدارية بيضاء شريحية مع مكتبة جانبية من الخشب الطبيعي المضاء بسبوت لايت مخفي لإبراز دفء المكان.</p>
-              </div>
-            </div>
+
+
 
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
@@ -1719,9 +1527,11 @@
             <div
               class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 sm:gap-4">
               <div>
-                <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">SIGNATURE KITCHEN // 04-A</span>
+                <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">SIGNATURE
+                  KITCHEN // 04-A</span>
                 <h3 class="text-lg sm:text-2xl font-bold text-ivory">مطبخ معماري فاخر بجزيرة مدمجة وتكسيات جدارية</h3>
-                <p class="text-xs text-ivory/70 mt-1 max-w-xl">خزائن مات سوداء ممتدة للسقف مع بار طعام خشب جوز وإضاءة مسارية دافئة</p>
+                <p class="text-xs text-ivory/70 mt-1 max-w-xl">خزائن مات سوداء ممتدة للسقف مع بار طعام خشب جوز وإضاءة
+                  مسارية دافئة</p>
               </div>
               <div
                 class="zoom-indicator px-3.5 sm:px-4 py-2 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs font-bold text-gold shrink-0">
@@ -1737,24 +1547,25 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 8.png"
-              data-title="مطبخ رمادي مات بتوزيع حرف L وخشب البلوط الطبيعي مع جزيرة وسطية" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض مطبخ الرمادي المات وحرف L">
+              data-title="مطبخ رمادي مات بتوزيع حرف L وخشب البلوط الطبيعي مع جزيرة وسطية"
+              data-category="المطابخ الخشبية" tabindex="0" role="button" aria-label="عرض مطبخ الرمادي المات وحرف L">
 
-              <img src="../img/kitchen/Artboard 8.png"
-                alt="مطبخ مودرن رمادي وخشب بلوط بتوزيع حرف L وجزيرة وسطية" 
+              <img src="../img/kitchen/Artboard 8.png" alt="مطبخ مودرن رمادي وخشب بلوط بتوزيع حرف L وجزيرة وسطية"
                 width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">L-SHAPED SUITE // 04-B</span>
-                  <p class="text-sm sm:text-base font-bold text-ivory">مطبخ رمادي مات بخزائن زجاجية مضيئة وجزيرة وسطية</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أسطح خشبية دافئة مع درف زجاجية علوية ومساحات تخزين ذكية</p>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">L-SHAPED SUITE //
+                    04-B</span>
+                  <p class="text-sm sm:text-base font-bold text-ivory">مطبخ رمادي مات بخزائن زجاجية مضيئة وجزيرة وسطية
+                  </p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أسطح خشبية دافئة مع درف زجاجية علوية
+                    ومساحات تخزين ذكية</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1764,24 +1575,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 2.png"
-              data-title="مطبخ أوبن كونسبت بخزائن بلوط طبيعي وشبه جزيرة رخامية" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button" 
-              aria-label="عرض مطبخ البلوط وشبه الجزيرة">
+              data-title="مطبخ أوبن كونسبت بخزائن بلوط طبيعي وشبه جزيرة رخامية" data-category="المطابخ الخشبية"
+              tabindex="0" role="button" aria-label="عرض مطبخ البلوط وشبه الجزيرة">
 
-              <img src="../img/kitchen/Artboard 2.png"
-                alt="مطبخ مفتوح واسع بخزائن خشب البلوط وكاونتر رخامي فاخر" 
+              <img src="../img/kitchen/Artboard 2.png" alt="مطبخ مفتوح واسع بخزائن خشب البلوط وكاونتر رخامي فاخر"
                 width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">OPEN-PLAN OAK // 04-C</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">OPEN-PLAN OAK //
+                    04-C</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">مطبخ أوبن كونسبت بخزائن بلوط وشبه جزيرة كلكتا</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أرفف علوية مفتوحة بإضاءة خطية LED مدمجة مع رخام الكوارتز</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">أرفف علوية مفتوحة بإضاءة خطية LED مدمجة مع
+                    رخام الكوارتز</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1791,24 +1602,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 10.png"
-              data-title="مطبخ طراز صناعي بتشطيب حجري ومقابض نحاسية ذهبية وجزيرة طهي" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض مطبخ التشطيب الحجري">
+              data-title="مطبخ طراز صناعي بتشطيب حجري ومقابض نحاسية ذهبية وجزيرة طهي" data-category="المطابخ الخشبية"
+              tabindex="0" role="button" aria-label="عرض مطبخ التشطيب الحجري">
 
-              <img src="../img/kitchen/Artboard 10.png"
-                alt="مطبخ معاصر بتشطيب خرساني أنيق ومقابض نحاسية وجزيرة وسطية" 
+              <img src="../img/kitchen/Artboard 10.png" alt="مطبخ معاصر بتشطيب خرساني أنيق ومقابض نحاسية وجزيرة وسطية"
                 width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STONE TEXTURE & BRASS // 04-D</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">STONE TEXTURE & BRASS //
+                    04-D</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">مطبخ خرساني معاصر بمقابض نحاسية وجزيرة طهي</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">موقد غاز مسطح مدمج في الجزيرة مع أسطح خشبية معالجة</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">موقد غاز مسطح مدمج في الجزيرة مع أسطح
+                    خشبية معالجة</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1818,24 +1629,24 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 5 (2).png"
-              data-title="نيش حوض غسيل غاطس من خشب البلوط محاط بخزائن حجرية داكنة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض نيش حوض الغسيل الخشبي">
+              data-title="نيش حوض غسيل غاطس من خشب البلوط محاط بخزائن حجرية داكنة" data-category="المطابخ الخشبية"
+              tabindex="0" role="button" aria-label="عرض نيش حوض الغسيل الخشبي">
 
               <img src="../img/kitchen/Artboard 5 (2).png"
-                alt="تجويف خشبي دافئ لحوض المطبخ والفرن المدمج ضمن خزائن داكنة" 
-                width="900" height="560" loading="lazy"
+                alt="تجويف خشبي دافئ لحوض المطبخ والفرن المدمج ضمن خزائن داكنة" width="900" height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">RECESSED ALCOVE // 04-E</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">RECESSED ALCOVE //
+                    04-E</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">نيش حوض غاطس من خشب البلوط ضمن خزائن حجرية</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">إطار خشبي دافئ يكسر حدة اللون الداكن ويوفر إضاءة غاطسة مركزة</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">إطار خشبي دافئ يكسر حدة اللون الداكن ويوفر
+                    إضاءة غاطسة مركزة</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1850,24 +1661,27 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 3 (1).png"
-              data-title="مطبخ مودرن حرف U بتكسيات خشبية مضلعة لكاونتر البار ووحدة أرفف رأسية مضيئة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
+              data-title="مطبخ مودرن حرف U بتكسيات خشبية مضلعة لكاونتر البار ووحدة أرفف رأسية مضيئة"
+              data-category="المطابخ الخشبية" tabindex="0" role="button"
               aria-label="عرض مطبخ البار المضلع والأرفف المضيئة">
 
               <img src="../img/kitchen/Artboard 3 (1).png"
-                alt="مطبخ مودرن بتصميم حرف U وتكسيات خشبية رأسية لكاونتر الإفطار وأرفف ديكورية بإضاءة دافئة" 
-                width="900" height="560" loading="lazy"
+                alt="مطبخ مودرن بتصميم حرف U وتكسيات خشبية رأسية لكاونتر الإفطار وأرفف ديكورية بإضاءة دافئة" width="900"
+                height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">FLUTED BAR & U-SHAPE // 04-F</span>
-                  <p class="text-sm sm:text-base font-bold text-ivory">مطبخ حرف U بتكسيات مضلعة لكاونتر البار وأرفف مضيئة</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">خزائن بيج مطفية متصلة بوحدات أرفف طويلة بإضاءة LED مخفية متدفقة</p>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">FLUTED BAR & U-SHAPE //
+                    04-F</span>
+                  <p class="text-sm sm:text-base font-bold text-ivory">مطبخ حرف U بتكسيات مضلعة لكاونتر البار وأرفف
+                    مضيئة</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">خزائن بيج مطفية متصلة بوحدات أرفف طويلة
+                    بإضاءة LED مخفية متدفقة</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1877,24 +1691,25 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/10] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 7.png"
-              data-title="تصميم وتنفيذ صالة عرض لمطبخ عصري رمادي فاحم مع جزيرة خشبية مدمجة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض جناح المطبخ الرمادي الفاحم">
+              data-title="تصميم وتنفيذ صالة عرض لمطبخ عصري رمادي فاحم مع جزيرة خشبية مدمجة"
+              data-category="المطابخ الخشبية" tabindex="0" role="button" aria-label="عرض جناح المطبخ الرمادي الفاحم">
 
               <img src="../img/kitchen/Artboard 7.png"
-                alt="جناح مطبخ متكامل بخزائن داكنة وتكسيات خشبية وجزيرة مدمجة وأجهزة مطبخ مبيتة" 
-                width="900" height="560" loading="lazy"
+                alt="جناح مطبخ متكامل بخزائن داكنة وتكسيات خشبية وجزيرة مدمجة وأجهزة مطبخ مبيتة" width="900"
+                height="560" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none">
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
+              <div
+                class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">EXECUTIVE SUITE // 04-G</span>
+                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">EXECUTIVE SUITE //
+                    04-G</span>
                   <p class="text-sm sm:text-base font-bold text-ivory">جناح المطبخ التنفيذي بلون الفحم وجزيرة البلوط</p>
-                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">توزيع جداري كامل للأجهزة المدمجة وثلاجة مبيتة مع جزيرة خشبية حصرية</p>
+                  <p class="text-[11px] text-ivory/60 mt-0.5 hidden sm:block">توزيع جداري كامل للأجهزة المدمجة وثلاجة
+                    مبيتة مع جزيرة خشبية حصرية</p>
                 </div>
                 <span class="text-[11px] font-bold text-gold shrink-0 ps-2">معاينة</span>
               </div>
@@ -1909,14 +1724,12 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 11.png"
-              data-title="مطبخ نيو كلاسيك عصري بلون التوب مع جزيرة تحضير وأجهزة مدمجة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض مطبخ التوب العصري">
+              data-title="مطبخ نيو كلاسيك عصري بلون التوب مع جزيرة تحضير وأجهزة مدمجة" data-category="المطابخ الخشبية"
+              tabindex="0" role="button" aria-label="عرض مطبخ التوب العصري">
 
               <img src="../img/kitchen/Artboard 11.png"
-                alt="مطبخ بلون التوب وجزيرة رخامية وأجهزة كهربائية مدمجة بالخزائن" 
-                width="700" height="480" loading="lazy"
+                alt="مطبخ بلون التوب وجزيرة رخامية وأجهزة كهربائية مدمجة بالخزائن" width="700" height="480"
+                loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
               <div
@@ -1935,13 +1748,10 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300"
               data-img-src="../img/kitchen/Artboard 9.png"
-              data-title="مطبخ اسكندنافي هادئ بخشب البلوط الفاتح وخزائن بيضاء وأرفف مكشوفة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض مطبخ البلوط الفاتح">
+              data-title="مطبخ اسكندنافي هادئ بخشب البلوط الفاتح وخزائن بيضاء وأرفف مكشوفة"
+              data-category="المطابخ الخشبية" tabindex="0" role="button" aria-label="عرض مطبخ البلوط الفاتح">
 
-              <img src="../img/kitchen/Artboard 9.png"
-                alt="مطبخ اسكندنافي خشبي بأرفف مفتوحة وخزائن علوية ناعمة" 
+              <img src="../img/kitchen/Artboard 9.png" alt="مطبخ اسكندنافي خشبي بأرفف مفتوحة وخزائن علوية ناعمة"
                 width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
@@ -1950,7 +1760,8 @@
               </div>
               <div class="absolute bottom-3 start-3 end-3 flex items-end justify-between">
                 <div>
-                  <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">SCANDINAVIAN OAK // 04-I</span>
+                  <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">SCANDINAVIAN OAK //
+                    04-I</span>
                   <p class="text-xs sm:text-sm font-bold text-ivory">خشب بلوط وأرفف ديكورية مفتوحة</p>
                 </div>
                 <span class="text-[10px] font-bold text-gold">معاينة</span>
@@ -1961,13 +1772,10 @@
             <div
               class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 sm:col-span-2 lg:col-span-1"
               data-img-src="../img/kitchen/Artboard 4 (1).png"
-              data-title="مطبخ زاوية أبيض مع كاونتر إفطار وبوكسات خشبية مفتوحة" 
-              data-category="المطابخ الخشبية" 
-              tabindex="0" role="button"
-              aria-label="عرض مطبخ الزاوية الأبيض">
+              data-title="مطبخ زاوية أبيض مع كاونتر إفطار وبوكسات خشبية مفتوحة" data-category="المطابخ الخشبية"
+              tabindex="0" role="button" aria-label="عرض مطبخ الزاوية الأبيض">
 
-              <img src="../img/kitchen/Artboard 4 (1).png"
-                alt="مطبخ زاوية أبيض بخزائن مفتوحة وكاونتر وجبات سريعة" 
+              <img src="../img/kitchen/Artboard 4 (1).png" alt="مطبخ زاوية أبيض بخزائن مفتوحة وكاونتر وجبات سريعة"
                 width="700" height="480" loading="lazy"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
@@ -1976,7 +1784,8 @@
               </div>
               <div class="absolute bottom-3 start-3 end-3 flex items-end justify-between">
                 <div>
-                  <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">CORNER SUITE // 04-J</span>
+                  <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">CORNER SUITE //
+                    04-J</span>
                   <p class="text-xs sm:text-sm font-bold text-ivory">مطبخ أبيض وبوكسات خشبية وكاونتر إفطار</p>
                 </div>
                 <span class="text-[10px] font-bold text-gold">معاينة</span>
@@ -2020,96 +1829,323 @@
           </div>
         </div>
 
-        <!-- Asymmetric Trio Layout: Vertical Fluted Divider + 3D Wall Panel + Open Screen -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        <!-- Dynamic Bespoke Architectural Woodwork Composition: 10 Bespoke Pieces from Wooden-decor -->
+        <div class="space-y-6 sm:space-y-8">
 
-          <!-- Primary Room Partition (Cols 6) -->
-          <div class="md:col-span-6">
-            <div
-              class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 bg-charcoal h-full min-h-[280px] sm:min-h-[380px] relative"
-              data-img-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
-              data-title="بارتشن فواصل خشبية شرائحية تفصل الصالة عن المجلس" data-category="البارتشنات والتكسيات"
-              tabindex="0" role="button" aria-label="عرض الفاصل الخشبي المعماري">
+          <!-- Row 1: Master Asymmetric Duet (2 Flagship Architectural Features [Cols 7 + Cols 5]) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
 
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
-                alt="فاصل خشبي رأسي شرائحي يمنح خصوصية بصرية دون إغلاق الضوء" width="1000" height="900" loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-              <!-- Hotspot on Architectural Slats -->
-              <div class="hotspot-pin" style="top: 48%; left: 48%;" aria-label="مواصفة الشرائح الخشبية">
-                <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل البارتشن الشرائحي">
-                  <span class="hotspot-pulse-ring"></span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                  </svg>
-                </button>
-                <div class="hotspot-popover">
-                  <span class="text-[10px] font-mono text-gold block mb-1">PARTITION SYSTEM // 05-A</span>
-                  <h4 class="text-xs font-bold text-ivory mb-1">فواصل شرائحية متباعدة 40 ملم</h4>
-                  <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">تسمح بمرور الضوء الطبيعي وتدفق الهواء
-                    مع تحقيق الخصوصية البصرية المطلوبة بين الصالة والمجلس.</p>
-                </div>
-              </div>
-
+            <!-- 1. Primary Slat Partition (Gemini_Generated_Image_49tygn49tygn49ty.jpg.jpeg) -->
+            <div class="lg:col-span-7">
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 bg-charcoal h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] relative shadow-2xl transition-all duration-300 cursor-pointer"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_49tygn49tygn49ty.jpg.jpeg"
+                data-title="بارتشن فواصل خشبية شرائحية معمارية تفصل الصالة مع إضاءة محيطية دافئة"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button"
+                aria-label="عرض الفاصل الخشبي المعماري الرئيسي">
 
-              <div
-                class="absolute bottom-3 sm:bottom-5 start-3 sm:start-5 end-3 sm:end-5 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-3">
-                <div>
-                  <span class="text-[10px] font-mono text-gold uppercase tracking-wider block">PARTITION 05-A</span>
-                  <h3 class="text-base sm:text-lg font-bold text-ivory">فواصل خشبية شرائحية تحافظ على الضوء والاتساع
-                  </h3>
-                </div>
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_49tygn49tygn49ty.jpg.jpeg"
+                  alt="فاصل خشبي رأسي شرائحي يمنح خصوصية بصرية وفخامة معمارية مع إضاءة خافتة" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+
+
+
+
                 <div
-                  class="zoom-indicator px-3 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
-                  تكبير
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+
+                <div
+                  class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-4">
+                  <div>
+                    <span
+                      class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">SIGNATURE
+                      PARTITION // 05-A</span>
+                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">بارتشن شرائحي معماري بفواصل متناسقة
+                    </h3>
+                    <p class="text-xs text-ivory/60 mt-0.5">تنظيم بصري للفراغات المفتوحة مع الحفاظ على امتداد الضوء
+                      والاتساع</p>
+                  </div>
+                  <div
+                    class="zoom-indicator px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
+                    معاينة
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- 2. 3D Wall Cladding Suite (Gemini_Generated_Image_5a3s6o5a3s6o5a3s (1).jpg.jpeg) -->
+            <div class="lg:col-span-5">
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] relative shadow-2xl transition-all duration-300 cursor-pointer"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_5a3s6o5a3s6o5a3s (1).jpg.jpeg"
+                data-title="تكسيات جدارية ثلاثية الأبعاد بتجاويف هندسية مضيئة وعزل صوتي فاخر"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button"
+                aria-label="عرض التكسيات الجدارية ثلاثية الأبعاد">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_5a3s6o5a3s6o5a3s (1).jpg.jpeg"
+                  alt="تكسية خشبية جدارية هندسية ثلاثية الأبعاد مع إنارة خفية للمجالس الفاخرة" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+
+                <div
+                  class="absolute bottom-4 sm:bottom-6 start-4 sm:start-6 end-4 sm:end-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-4">
+                  <div>
+                    <span class="text-[10px] sm:text-[11px] font-mono text-gold uppercase tracking-wider block">3D
+                      CLADDING // 05-B</span>
+                    <h3 class="text-base sm:text-xl font-bold text-ivory mt-0.5">تكسيات جدارية ثلاثية الأبعاد</h3>
+                    <p class="text-xs text-ivory/60 mt-0.5">عمق بصري وإضاءة خطية خفية تحول الجدار إلى لوحة معمارية
+                      متكاملة</p>
+                  </div>
+                  <div
+                    class="zoom-indicator px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#161512]/85 backdrop-blur-md border border-gold/40 text-xs text-gold shrink-0">
+                    معاينة
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Secondary 3D Acoustic & Wall Claddings (Cols 6) -->
-          <div class="md:col-span-6 flex flex-col justify-between gap-6">
+          <!-- Row 2: 4-Item Architectural Grid (4 Pieces) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 items-stretch">
 
-            <!-- 3D Wall Cladding -->
-            <div
-              class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 bg-charcoal aspect-[16/10] relative"
-              data-img-src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=85"
-              data-title="تكسيات جدارية ثلاثية الأبعاد بعزل صوتي جمالي" data-category="البارتشنات والتكسيات"
-              tabindex="0" role="button" aria-label="عرض التكسيات الجدارية ثلاثية الأبعاد">
-
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=85"
-                alt="تكسية خشبية جدارية هندسية ثلاثية الأبعاد للمجالس" width="900" height="560" loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
+            <!-- 3. Fluted Slat Wall (Gemini_Generated_Image_5sob4d5sob4d5sob.jpg.jpeg) -->
+            <div>
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none">
-              </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4">
-                <span class="text-[10px] font-mono text-gold">CLADDING 05-B</span>
-                <p class="text-sm sm:text-base font-bold text-ivory">تكسيات جدارية مجوفة تعزز الهدوء والفخامة</p>
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_5sob4d5sob4d5sob.jpg.jpeg"
+                data-title="جدارية شرائح خشبية مضلعة عصرية مع إضاءة مخفية للمجالس والصالات"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button"
+                aria-label="عرض الجدارية الشرائحية المضلعة">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_5sob4d5sob4d5sob.jpg.jpeg"
+                  alt="جدارية خشبية شرائحية رأسية بتشطيب جوز طبيعي وإضاءة ليد غير مباشرة" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">FLUTED SLATS //
+                      05-C</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">جدارية شرائح خشبية مضلعة</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
               </div>
             </div>
 
-            <!-- Vertical Slat Room Filter -->
-            <div
-              class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 bg-charcoal aspect-[16/10] relative"
-              data-img-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85"
-              data-title="قاطع خشبي هندسي للممرات والمداخل" data-category="البارتشنات والتكسيات" tabindex="0"
-              role="button" aria-label="عرض قواطع المداخل والممرات">
-
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
-                alt="قواطع خشبية هندسية لمداخل الفلل والممرات" width="900" height="560" loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
+            <!-- 4. Architectural Screen Divider (Gemini_Generated_Image_8xzcgk8xzcgk8xzc.jpg.jpeg) -->
+            <div>
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none">
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_8xzcgk8xzcgk8xzc.jpg.jpeg"
+                data-title="قاطع خشبي معماري ذكي يدمج بين الخصوصية وتدفق الضوء الطبيعي"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button" aria-label="عرض القاطع الخشبي المعماري">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_8xzcgk8xzcgk8xzc.jpg.jpeg"
+                  alt="قاطع خشبي داخلي لفصل مساحات المعيشة وتوجيه الممرات" width="1232" height="864" loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">SPACE DIVIDER //
+                      05-D</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">قاطع خشبي ذكي للممرات</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
               </div>
-              <div class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4">
-                <span class="text-[10px] font-mono text-gold">ENTRANCE SLATS 05-C</span>
-                <p class="text-sm sm:text-base font-bold text-ivory">تنظيم حركة المداخل بلمسة معمارية دافئة</p>
+            </div>
+
+            <!-- 5. Media & Cladding Wall (Gemini_Generated_Image_f4ar3lf4ar3lf4ar.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_f4ar3lf4ar3lf4ar.jpg.jpeg"
+                data-title="جدار تلفزيون مكسو بخشب الجوز الطبيعي مع رفوف معلقة مضيئة"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button"
+                aria-label="عرض جدار التلفزيون المكسو بالخشب">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_f4ar3lf4ar3lf4ar.jpg.jpeg"
+                  alt="تكسية خشبية جدارية لشاشة التلفزيون مع كونسول معلق وإضاءة بروفايل" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">MEDIA CLADDING //
+                      05-E</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">جدارية تلفزيون بخشب الجوز</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Entrance Screen (Gemini_Generated_Image_jsuywzjsuywzjsuy.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_jsuywzjsuywzjsuy.jpg.jpeg"
+                data-title="فاصل مدخل فندقي يحدد مسارات الحركة بلمسة فخامة ودفء" data-category="البارتشنات والتكسيات"
+                tabindex="0" role="button" aria-label="عرض فاصل المداخل الفندقي">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_jsuywzjsuywzjsuy.jpg.jpeg"
+                  alt="فاصل مدخل خشبي أنيق بتدرجات خشبية دافئة وشرائح معمارية رأسية" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">ENTRANCE FOYER //
+                      05-F</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">فاصل مدخل فندقي شرائحي</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Row 3: 4-Item Detailed Module Grid (4 Pieces) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 items-stretch">
+
+            <!-- 7. Acoustic Cladding Feature (Gemini_Generated_Image_snrlzzsnrlzzsnrl.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_snrlzzsnrlzzsnrl.jpg.jpeg"
+                data-title="تكسيات جدارية أكوستيك معمارية تعزز هدوء المكان وسكونه" data-category="البارتشنات والتكسيات"
+                tabindex="0" role="button" aria-label="عرض التكسيات الجدارية الأكوستيك">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_snrlzzsnrlzzsnrl.jpg.jpeg"
+                  alt="تكسية خشبية أكوستيك عازلة لارتداد الصوت في الصالات والمكاتب الفاخرة" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">ACOUSTIC WALL //
+                      05-G</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">تكسيات أكوستيك عازلة</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Paneling Suite (Gemini_Generated_Image_sylw9tsylw9tsylw.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_sylw9tsylw9tsylw.jpg.jpeg"
+                data-title="تجليد جداري خشبي متكامل للمجالس المفتوحة بتفاصيل متناهية الدقة"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button" aria-label="عرض التجليد الجداري الخشبي">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_sylw9tsylw9tsylw.jpg.jpeg"
+                  alt="تجليد جداري خشبي فاخر بتشطيبات متقنة ومسارات إضاءة محيطية" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">MAJLIS PANELING //
+                      05-H</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">تجليد جداري للمجالس</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9. Louvered Screen (Gemini_Generated_Image_w4nslww4nslww4ns.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_w4nslww4nslww4ns.jpg.jpeg"
+                data-title="بارتشن شرائحي دوار يوفر تحكماً مرناً في مستوى الخصوصية والضوء"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button" aria-label="عرض البارتشن الشرائحي">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_w4nslww4nslww4ns.jpg.jpeg"
+                  alt="بارتشن خشبي هندسي مبتكر يجمع بين الخصوصية والجمال المعماري" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">LOUVERED SCREEN //
+                      05-I</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">بارتشن شرائحي مرن</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10. Minimalist Accent Wall (Gemini_Generated_Image_ydrtfpydrtfpydrt.jpg.jpeg) -->
+            <div>
+              <div
+                class="gallery-item architectural-frame gallery-zoom-card group rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 bg-charcoal aspect-[16/11] relative transition-all duration-300 cursor-pointer shadow-xl h-full"
+                data-img-src="../img/Wooden-decor/Gemini_Generated_Image_ydrtfpydrtfpydrt.jpg.jpeg"
+                data-title="تكسية جدارية خشبية مينيمالية تجمع بين خطوط البساطة وعمق الخشب الطبيعي"
+                data-category="البارتشنات والتكسيات" tabindex="0" role="button"
+                aria-label="عرض التكسية الجدارية المينيمالية">
+
+                <img src="../img/Wooden-decor/Gemini_Generated_Image_ydrtfpydrtfpydrt.jpg.jpeg"
+                  alt="تكسية خشبية جدارية عصرية بتفاصيل معمارية ناعمة وإضاءة خطية" width="1232" height="864"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none">
+                </div>
+                <div
+                  class="absolute bottom-3 sm:bottom-4 start-3 sm:start-4 end-3 sm:end-4 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[9px] font-mono text-gold uppercase tracking-wider block">MINIMALIST ACCENT //
+                      05-J</span>
+                    <h3 class="text-xs sm:text-sm font-bold text-ivory mt-0.5">تكسية جدارية مينيمالية</h3>
+                  </div>
+                  <span class="text-[10px] font-bold text-gold shrink-0">معاينة</span>
+                </div>
               </div>
             </div>
 
@@ -2164,21 +2200,7 @@
               alt="باب خشبي محوري بإطار مخفي متناغم مع الجدران" width="800" height="1000" loading="lazy"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
 
-            <!-- Hotspot on Pivot Hinge -->
-            <div class="hotspot-pin" style="top: 50%; left: 35%;" aria-label="مواصفة الباب المحوري">
-              <button type="button" class="hotspot-pin-btn" aria-label="عرض تفاصيل الباب المحوري">
-                <span class="hotspot-pulse-ring"></span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-              <div class="hotspot-popover">
-                <span class="text-[10px] font-mono text-gold block mb-1">PIVOT MECHANISM // 06-A</span>
-                <h4 class="text-xs font-bold text-ivory mb-1">محور دوران خفي يتحمل 180 كجم</h4>
-                <p class="text-[11px] text-ivory/80 leading-relaxed font-normal">نظام ألماني بدون مفصلات ظاهرة يوفر حركة
-                  انسيابية صامتة مع قفل مغناطيسي متطور.</p>
-              </div>
-            </div>
+
 
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
@@ -2296,394 +2318,7 @@
 
     </div>
 
-    <!-- ======================================================================= -->
-    <!-- 11. CONTACT ATELIER SECTION: "كل مشروع يبدأ بحوار" — 100% Image-Free    -->
-    <!-- ======================================================================= -->
-    <div id="consultation"></div>
-    <section id="contact"
-      class="relative py-24 sm:py-32 bg-[#161512] text-ivory border-t border-white/10 overflow-hidden"
-      aria-labelledby="contact-heading">
-
-      <!-- Architectural Geometric Drafting Lines & Ambient Glows (NO IMAGES) -->
-      <div class="absolute inset-0 blueprint-grid pointer-events-none opacity-35"></div>
-      <div
-        class="absolute top-1/3 -right-20 w-[32rem] h-[32rem] bg-walnut/15 rounded-full blur-[130px] pointer-events-none">
-      </div>
-      <div
-        class="absolute bottom-1/4 -left-20 w-[30rem] h-[30rem] bg-gold/10 rounded-full blur-[120px] pointer-events-none">
-      </div>
-
-      <!-- Architectural Technical Coordinate Watermarks -->
-      <div
-        class="hidden xl:block absolute top-10 left-12 text-[10px] font-mono text-gold/30 tracking-widest uppercase select-none pointer-events-none">
-        RIWAQ ATELIER • CONTACT & COMMISSIONS • REF: 2026-TALK
-      </div>
-      <div
-        class="hidden xl:block absolute top-10 right-12 text-[10px] font-mono text-gold/30 tracking-widest uppercase select-none pointer-events-none">
-        COMMISSION INQUIRY • ARCHITECTURAL CONSULTATION
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-
-          <!-- SIDE 1: مساحة الحوار (Dialogue Space & Contact Directory) -->
-          <div class="lg:col-span-5 flex flex-col justify-between">
-            <div>
-              <!-- Category Pill Badge -->
-              <div
-                class="reveal-on-scroll inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel-gold border border-gold/40 mb-6 badge-shimmer">
-                <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                <span class="text-xs font-bold font-cinzel tracking-widest text-gold-light uppercase">LET'S TALK</span>
-                <span class="text-white/20 text-xs">/</span>
-                <span class="text-xs font-bold text-ivory">تواصل معنا</span>
-              </div>
-
-              <!-- Bold Arabic Headline -->
-              <div class="reveal-on-scroll delay-100 mb-6">
-                <h2 id="contact-heading"
-                  class="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-ivory leading-[1.2] sm:leading-[1.16] tracking-tight">
-                  عندك فكرة؟
-                  <span class="block text-gold-gradient mt-2">خلينا نبدأ منها</span>
-                </h2>
-                <div class="flex items-center gap-3 mt-5">
-                  <div class="w-2 h-2 rounded-full bg-gold"></div>
-                  <div class="h-[1px] w-28 bg-gradient-to-l from-gold/50 to-transparent"></div>
-                  <span class="text-[10px] font-mono text-gold/40 uppercase tracking-widest">EVERY PIECE BEGINS WITH
-                    DIALOGUE</span>
-                </div>
-              </div>
-
-              <!-- Editorial Invitation Description -->
-              <p
-                class="reveal-on-scroll delay-200 text-sm sm:text-base text-ivory/80 leading-relaxed font-normal mb-10 border-s-2 border-gold/40 ps-4 text-justify sm:text-right">
-                سواء كنت تخطط لخزانة جديدة، أو غرفة نوم متكاملة، أو مطبخ بتصميم خاص، شاركنا فكرتك واحتياجاتك، ولنبدأ
-                بتحديد الخطوة المناسبة لمشروعك.
-              </p>
-
-              <!-- Editorial Contact Directory (Vertical List, NO Boxed Cards) -->
-              <div class="reveal-on-scroll delay-300 space-y-6 pt-4 border-t border-white/10">
-
-                <!-- Phone -->
-                <div class="group flex items-start gap-4 pb-5 border-b border-white/5">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:border-gold/50 group-hover:bg-gold/10 transition-colors shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="text-[11px] font-bold text-ivory/50 uppercase tracking-wider block font-cinzel">DIRECT
-                      CALL / اتصل بنا</span>
-                    <a href="tel:+966500000000"
-                      class="text-base sm:text-lg font-bold text-ivory group-hover:text-gold transition-colors font-mono"
-                      dir="ltr">
-                      +966 50 000 0000
-                    </a>
-                    <span class="text-[11px] text-ivory/50 block mt-0.5">محادثة هاتفية مباشرة مع استشاري الأثاث</span>
-                  </div>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="group flex items-start gap-4 pb-5 border-b border-white/5">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/20 transition-colors shrink-0">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.449.741.964 1.2.662.589 1.22.772 1.393.858.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.419-.1.824z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span
-                      class="text-[11px] font-bold text-emerald-400/70 uppercase tracking-wider block font-cinzel">INSTANT
-                      CHAT / واتساب</span>
-                    <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A%20%D9%85%D8%B9%20%D8%B1%D9%90%D9%88%D8%A7%D9%82"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-base sm:text-lg font-bold text-ivory group-hover:text-emerald-400 transition-colors">
-                      إرسال رسالة عبر واتساب
-                    </a>
-                    <span class="text-[11px] text-ivory/50 block mt-0.5">مشاركة المخططات والصور وتلقي رد سريع</span>
-                  </div>
-                </div>
-
-                <!-- Email -->
-                <div class="group flex items-start gap-4 pb-5 border-b border-white/5">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:border-gold/50 group-hover:bg-gold/10 transition-colors shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span
-                      class="text-[11px] font-bold text-ivory/50 uppercase tracking-wider block font-cinzel">ARCHITECTURAL
-                      INQUIRY / البريد</span>
-                    <a href="mailto:info@riwaq-wood.com"
-                      class="text-base sm:text-lg font-bold text-ivory group-hover:text-gold transition-colors font-mono">
-                      info@riwaq-wood.com
-                    </a>
-                    <span class="text-[11px] text-ivory/50 block mt-0.5">للمكاتب الهندسية ومشاريع الفلل الكبرى</span>
-                  </div>
-                </div>
-
-                <!-- Studio Address & Hours -->
-                <div class="flex items-start gap-4 text-xs text-ivory/70">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="text-[11px] font-bold text-ivory/50 uppercase tracking-wider block font-cinzel">STUDIO
-                      ATELIER / موقع الاستوديو</span>
-                    <p class="text-sm font-semibold text-ivory mt-0.5">الرياض، حي الملقا — المملكة العربية السعودية</p>
-                    <p class="text-[11px] text-ivory/50 mt-1">السبت – الخميس: 9:00 ص – 9:00 م (يُفضّل حجز موعد مسبق)</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Atelier Technical Footer Note -->
-            <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-ivory/50">
-              <span class="font-mono text-[10px] text-gold/60">YOUR PROJECT STARTS HERE</span>
-              <span>ابتكار وتصميم للأعمال الخشبية الفاخرة</span>
-            </div>
-          </div>
-
-          <!-- SIDE 2: نموذج طلب التواصل (The Atelier Commission Form) -->
-          <div class="lg:col-span-7 reveal-on-scroll delay-200">
-            <div
-              class="relative rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-gold/30 bg-[#201F1B]/95 shadow-2xl backdrop-blur-xl">
-
-              <!-- Blueprint Spec Header -->
-              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6 sm:mb-7 text-xs">
-                <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-gold"></span>
-                  <span class="font-bold text-ivory text-sm">نموذج الاستشارة المعمارية</span>
-                </div>
-                <span class="font-mono text-[10px] text-gold-light/60 tracking-wider">REF: 2026-COMMISSION</span>
-              </div>
-
-              <!-- Live Feedback Alert Box -->
-              <div id="contact-alert" class="hidden mb-6" role="alert" aria-live="polite"></div>
-
-              <!-- Form Fields Wrapper -->
-              <form id="contact-atelier-form" class="space-y-5 sm:space-y-6" novalidate>
-                <div id="contact-fields-wrapper" class="space-y-5 sm:space-y-6">
-
-                  <!-- Grid for Name & Phone -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                    <div>
-                      <label for="contact-name" class="block text-xs font-bold text-ivory/90 mb-2">
-                        الاسم <span class="text-gold">*</span>
-                      </label>
-                      <input type="text" id="contact-name" name="name" required autocomplete="name"
-                        placeholder="اكتب اسمك الكريم"
-                        class="contact-input-field w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl bg-[#1A1916] border border-white/15 text-sm text-ivory placeholder-ivory/30">
-                    </div>
-
-                    <div>
-                      <label for="contact-phone" class="block text-xs font-bold text-ivory/90 mb-2">
-                        رقم الجوال <span class="text-gold">*</span>
-                      </label>
-                      <input type="tel" id="contact-phone" name="phone" required dir="ltr" autocomplete="tel"
-                        placeholder="+966 5X XXX XXXX"
-                        class="contact-input-field w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl bg-[#1A1916] border border-white/15 text-sm text-ivory placeholder-ivory/30 text-right">
-                    </div>
-                  </div>
-
-                  <!-- Service Selection Chips -->
-                  <div>
-                    <div class="flex items-center justify-between mb-2.5">
-                      <label class="block text-xs font-bold text-ivory/90">
-                        إيه الخدمة اللي بتفكر فيها؟ <span class="text-gold">*</span>
-                      </label>
-                      <span class="text-[11px] text-ivory/40">حدد التخصص المطلوب</span>
-                    </div>
-
-                    <input type="hidden" id="contact-service-input" name="service" value="" required>
-
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5" role="radiogroup"
-                      aria-label="اختر نوع الخدمة">
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="خزائن ودواليب"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">خزائن ودواليب</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="غرف نوم فندقية"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">غرف نوم فندقية</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0"
-                        data-service="تسريحات ووحدات مكياج"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">تسريحات ومكياج</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0"
-                        data-service="بارتشنات وفواصل"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">بارتشنات وفواصل</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="تكسيات خشبية"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">تكسيات جدارية</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="مطابخ خشبية"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">مطابخ مودرن</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="أبواب وأرفف"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">أبواب وأرفف</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="أثاث حسب الطلب"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">أثاث حسب الطلب</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-
-                      <button type="button" role="radio" aria-checked="false" tabindex="0" data-service="استفسار آخر"
-                        class="service-chip-btn px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-white/10 bg-[#1A1916] text-[11px] sm:text-xs font-medium text-ivory/80 text-right flex items-center justify-between hover:border-gold/40 cursor-pointer">
-                        <span class="truncate">استفسار عام</span>
-                        <svg
-                          class="chip-check-icon w-3.5 h-3.5 text-gold opacity-0 scale-50 transition-all shrink-0 ms-1"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Field 4: Project Details -->
-                  <div>
-                    <label for="contact-details" class="block text-xs font-bold text-ivory/90 mb-2">
-                      احكيلنا عن فكرتك
-                    </label>
-                    <textarea id="contact-details" name="details" rows="3"
-                      placeholder="اكتب تفاصيل بسيطة عن احتياجك أو المساحة أو التصميم المطلوب..."
-                      class="contact-input-field w-full px-4 py-3.5 rounded-xl bg-[#1A1916] border border-white/15 text-sm text-ivory placeholder-ivory/30 leading-relaxed resize-none"></textarea>
-                  </div>
-
-                  <!-- Submit Action Button -->
-                  <div class="pt-2">
-                    <button type="submit" id="contact-submit-btn"
-                      class="group relative w-full overflow-hidden px-8 py-4 rounded-xl bg-gradient-to-r from-walnut to-walnut-dark text-ivory font-bold text-sm sm:text-base border border-gold/40 shadow-xl hover:shadow-gold/20 hover:border-gold transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer">
-                      <span id="contact-submit-text" class="relative z-10 font-bold">إرسال طلب التواصل</span>
-                      <svg id="contact-submit-arrow"
-                        class="w-5 h-5 text-gold group-hover:-translate-x-1.5 transition-transform duration-300 relative z-10"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                      </svg>
-                      <svg id="contact-submit-spinner" class="hidden animate-spin w-5 h-5 text-gold relative z-10"
-                        fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                        </circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-                      </svg>
-                      <div
-                        class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      </div>
-                    </button>
-
-                    <p class="text-[11px] text-center text-ivory/40 mt-3">
-                      بياناتك في أمان تام • نتواصل معك لتحديد موعد المعاينة أو إرسال عينات الخشب
-                    </p>
-                  </div>
-
-                </div>
-
-                <!-- Success Confirmation Card -->
-                <div id="contact-success-card" class="hidden py-8 text-center space-y-5 animate-fade-in">
-                  <div
-                    class="w-16 h-16 mx-auto rounded-full bg-emerald-500/10 border-2 border-emerald-500/40 flex items-center justify-center text-emerald-400">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-ivory mb-2">تم استلام طلبك بنجاح!</h3>
-                    <p class="text-xs sm:text-sm text-ivory/75 max-w-md mx-auto leading-relaxed">
-                      شكراً لتواصلك مع استوديو ابتكار وتصميم. سيقوم أحد مهندسينا المعماريين بمراجعة فكرتك والتواصل معك
-                      خلال ساعات العمل لمناقشة أبعاد المساحة والخطوات التالية.
-                    </p>
-                  </div>
-
-                  <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
-                    <a id="contact-success-wa-btn" href="https://wa.me/966500000000" target="_blank"
-                      rel="noopener noreferrer"
-                      class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-emerald-950/50 text-emerald-300 border border-emerald-500/30 text-xs font-semibold flex items-center justify-center gap-2 hover:bg-emerald-900/40 transition-colors">
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771z" />
-                      </svg>
-                      <span>متابعة فورية عبر واتساب</span>
-                    </a>
-                    <button type="button" id="contact-reset-btn"
-                      class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white/5 text-ivory/70 border border-white/10 text-xs font-medium hover:text-ivory hover:bg-white/10 transition-colors">
-                      إرسال استفسار آخر
-                    </button>
-                  </div>
-                </div>
-
-              </form>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+   
 
       <!-- ======================================================================= -->
       <!-- SECTION: THE BRANCH ATLAS — سكشن فروعنا الإبداعي والتفاعلي             -->
@@ -3084,15 +2719,8 @@
           <a href="#" class="inline-flex items-center gap-3.5 mb-6 group focus:outline-none"
             aria-label="ابتكار وتصميم - العودة للأعلى">
             <div
-              class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-[#684632] to-[#24231F] border border-gold/40 flex items-center justify-center shadow-xl group-hover:border-gold transition-colors duration-300">
-              <svg class="w-7 h-7 text-gold-light group-hover:scale-105 transition-transform" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 21h18" />
-                <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
-                <path d="M9 7h6" />
-                <path d="M9 11h6" />
-                <path d="M9 15h6" />
-              </svg>
+              class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-[#684632] to-[#24231F] border border-gold/40 flex items-center justify-center p-2 shadow-xl group-hover:border-gold transition-colors duration-300 shrink-0">
+              <img src="../img/logo.png" alt="شعار شركة ابتكار وتصميم" class="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300">
               <div class="absolute -bottom-1 -left-1 w-2.5 h-2.5 rounded-full bg-gold"></div>
             </div>
             <div class="flex flex-col">
@@ -3123,19 +2751,19 @@
           <ul class="space-y-3 text-xs sm:text-sm">
             <li><a href="../index.html" class="footer-link-hover text-ivory/75 hover:text-gold">الرئيسية</a></li>
             <li><a href="#" class="footer-link-hover text-gold font-semibold">منتجاتنا</a></li>
-            <li><a href="../about/index.html" class="footer-link-hover text-ivory/75 hover:text-gold">عن ابتكار
-                وتصميم</a></li>
-            <li><a href="../index.html#services" class="footer-link-hover text-ivory/75 hover:text-gold">خدماتنا
-                والتخصصات</a></li>
-            <li><a href="#contact" class="footer-link-hover text-ivory/75 hover:text-gold">طلب مقاسات واستشارة</a></li>
+            <li><a href="../about/index.html" class="footer-link-hover text-ivory/75 hover:text-gold">قصتنا</a></li>
+            <li><a href="../our-factory/index.html" class="footer-link-hover text-ivory/75 hover:text-gold">مصنعنا</a></li>
+            <li><a href="../contact/index.html" class="footer-link-hover text-ivory/75 hover:text-gold">تواصل معنا</a></li>
             <!-- Official PDF Documents -->
             <li class="pt-2 border-t border-white/10">
               <a href="../pdf/%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1%20%D9%88%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84.pdf"
                 target="_blank" rel="noopener noreferrer"
                 class="footer-link-hover text-gold-light hover:text-gold flex items-center gap-2 group font-medium"
                 title="تحميل بروفايل الشركة PDF">
-                <svg class="w-4 h-4 text-gold group-hover:scale-110 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <svg class="w-4 h-4 text-gold group-hover:scale-110 transition-transform shrink-0" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 <span>بروفايل الشركة (PDF)</span>
               </a>
@@ -3145,8 +2773,10 @@
                 target="_blank" rel="noopener noreferrer"
                 class="footer-link-hover text-gold-light hover:text-gold flex items-center gap-2 group font-medium"
                 title="عرض رخصة المصنع PDF">
-                <svg class="w-4 h-4 text-gold group-hover:scale-110 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <svg class="w-4 h-4 text-gold group-hover:scale-110 transition-transform shrink-0" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 <span>رخصة المصنع (PDF)</span>
               </a>

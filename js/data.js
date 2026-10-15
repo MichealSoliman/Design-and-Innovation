@@ -14,22 +14,22 @@ const LUXURY_SLIDES_DATA = {
   slides: [
     {
       id: 1,
-      category: "خزائن مصممة حسب الطلب",
-      categoryShort: "خزائن ملابس",
-      badge: "دواليب ووحدات تخزين ذكية",
-      title: "مساحة أذكى.. وأناقة تدوم في كل زاوية",
-      description: "خزائن ملابس وغرف Walk-in Closet بتوزيع هندسي مدروس يستغل المساحات بذكاء استثنائي، ويجمع بين دفء خشب الجوز وفخامة التشطيبات العصرية المضيئة.",
+      category: "تصميم وتفصيل المطابخ",
+      categoryShort: "المطابخ الخشبية",
+      badge: "مطابخ عصرية متكاملة",
+      title: "جمال في التفاصيل.. وذكاء في كل حركة واستخدام",
+      description: "مطابخ مصممة لتناسب أبعاد مساحتك واحتياجاتك اليومية بدقة متناهية، مع خزائن مقاومة للرطوبة، ومفصلات أوروبية ذكية وتشطيبات خشبية تدوم لأجيال.",
       primaryCta: {
-        text: "اكتشف الخزائن",
-        href: "#wardrobes"
+        text: "اكتشف المطابخ",
+        href: "#kitchens"
       },
       secondaryCta: {
-        text: "طلب مقاسات خاصة",
+        text: "احجز زيارة استشارية",
         href: "#consultation"
       },
-      image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1920&q=80",
-      thumbImage: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=300&q=80",
-      alt: "خزانة ملابس خشبية فاخرة بتصميم مودرن وإضاءة داخلية دافئة"
+      image: "img/kitchen/Artboard 6.png",
+      thumbImage: "img/kitchen/Artboard 6.png",
+      alt: "مطبخ خشبي عصري فاخر بتشطيبات رخامية وخزائن مفصلة حسب الطلب"
     },
     {
       id: 2,
@@ -46,28 +46,28 @@ const LUXURY_SLIDES_DATA = {
         text: "معرض المشاريع",
         href: "#projects"
       },
-      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80",
-      thumbImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=300&q=80",
+      image: "img/Bedrooms/Warm Modern Bedroom Retreat.png",
+      thumbImage: "img/Bedrooms/Warm Modern Bedroom Retreat.png",
       alt: "غرفة نوم رئيسية فاخرة بأثاث خشبي راقٍ وتكسيات جدارية دافئة"
     },
     {
       id: 3,
-      category: "تصميم وتفصيل المطابخ",
-      categoryShort: "المطابخ الخشبية",
-      badge: "مطابخ عصرية متكاملة",
-      title: "جمال في التفاصيل.. وذكاء في كل حركة واستخدام",
-      description: "مطابخ مصممة لتناسب أبعاد مساحتك واحتياجاتك اليومية بدقة متناهية، مع خزائن مقاومة للرطوبة، ومفصلات أوروبية ذكية وتشطيبات خشبية تدوم لأجيال.",
+      category: "خزائن مصممة حسب الطلب",
+      categoryShort: "خزائن ملابس",
+      badge: "دواليب ووحدات تخزين ذكية",
+      title: "مساحة أذكى.. وأناقة تدوم في كل زاوية",
+      description: "خزائن ملابس وغرف Walk-in Closet بتوزيع هندسي مدروس يستغل المساحات بذكاء استثنائي، ويجمع بين دفء خشب الجوز وفخامة التشطيبات العصرية المضيئة.",
       primaryCta: {
-        text: "اكتشف المطابخ",
-        href: "#kitchens"
+        text: "اكتشف الخزائن",
+        href: "#wardrobes"
       },
       secondaryCta: {
-        text: "احجز زيارة استشارية",
+        text: "طلب مقاسات خاصة",
         href: "#consultation"
       },
-      image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1920&q=80",
-      thumbImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=300&q=80",
-      alt: "مطبخ خشبي عصري فاخر بتشطيبات رخامية وخزائن مفصلة حسب الطلب"
+      image: "img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg",
+      thumbImage: "img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg",
+      alt: "خزانة ملابس خشبية فاخرة بتصميم مودرن وإضاءة داخلية دافئة"
     },
     {
       id: 4,
@@ -84,8 +84,8 @@ const LUXURY_SLIDES_DATA = {
         text: "استعراض الكتالوج",
         href: "#catalog"
       },
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80",
-      thumbImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=300&q=80",
+      image: "img/Wooden-decor/Gemini_Generated_Image_49tygn49tygn49ty.jpg.jpeg",
+      thumbImage: "img/Wooden-decor/Gemini_Generated_Image_49tygn49tygn49ty.jpg.jpeg",
       alt: "تكسيات خشبية وفواصل جدارية معمارية راقية في صالة معيشة فاخرة"
     },
     {
@@ -115,7 +115,7 @@ const LUXURY_SLIDES_DATA = {
       name: "خزائن ودواليب الملابس",
       title: "مساحة لكل تفصيلة",
       description: "حلول تخزين تساعد على استغلال المساحة بذكاء، مع تصميمات تتناسب مع الغرفة واحتياجات الاستخدام اليومية.",
-      image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1600&q=80",
+      image: "./img/dressing-room/Gemini_Generated_Image_epljefepljefeplj.jpg.jpeg",
       spec: "خزائن Walk-in • إضاءات LED مخفية • أرفف ذكية",
       dimensions: "DIM: 360 × 260 CM",
       href: "#wardrobes",
@@ -127,7 +127,7 @@ const LUXURY_SLIDES_DATA = {
       name: "غرف النوم",
       title: "تناغم يصنع الراحة",
       description: "تصميمات غرف نوم تهتم بتناسق القطع والخامات والمساحات، من السرير إلى وحدات التخزين.",
-      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80",
+      image: "./img/Bedrooms/Artboard 11.png",
       spec: "أجنحة فندقية • أسرّة خشبية • تكسيات خلفية دافئة",
       dimensions: "DIM: 420 × 380 CM",
       href: "#bedrooms",
@@ -151,7 +151,7 @@ const LUXURY_SLIDES_DATA = {
       name: "البارتشنات والفواصل الخشبية",
       title: "افصل المساحة دون أن تفقد اتساعها",
       description: "فواصل خشبية تضيف خصوصية وتنظيمًا للمكان، مع الحفاظ على الانسجام مع بقية التصميم.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      image: "img/Wooden-decor/Gemini_Generated_Image_8xzcgk8xzcgk8xzc.jpg.jpeg",
       spec: "شرائح خشبية معمارية • فواصل دوارة • تهوية وبصرية",
       dimensions: "DIM: 280 × 290 CM",
       href: "#partitions",
@@ -163,7 +163,7 @@ const LUXURY_SLIDES_DATA = {
       name: "التكسيات والديكورات الجدارية",
       title: "الجدران جزء من الحكاية",
       description: "تكسيات وديكورات خشبية تضيف عمقًا بصريًا وتربط تفاصيل التصميم الداخلي معًا.",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+      image: "img/Wooden-decor/Gemini_Generated_Image_5a3s6o5a3s6o5a3s (1).jpg.jpeg",
       spec: "تكسيات ثلاثية الأبعاد • عزل صوتي جمالي • أخشاب طبيعية",
       dimensions: "DIM: 520 × 300 CM",
       href: "#cladding",
@@ -199,7 +199,7 @@ const LUXURY_SLIDES_DATA = {
       name: "الأثاث المصمم حسب الطلب",
       title: "تصميم يبدأ من احتياجك",
       description: "أفكار أثاث مصممة لتناسب طبيعة المساحة ومتطلبات الاستخدام، وفقًا للإمكانيات والخدمات المتاحة.",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80",
+      image: "./img/Picture6.jpg",
       spec: "طاولات طعام حرة • كونسول فاخر • تصميم هندسي خاص",
       dimensions: "DIM: BESPOKE ORDER",
       href: "#custom-furniture",
@@ -301,7 +301,7 @@ const LUXURY_SLIDES_DATA = {
     description: "سواء كنت تخطط لخزانة جديدة، أو غرفة نوم متكاملة، أو مطبخ بتصميم خاص، ابدأ رحلتك باختيار التصميم الذي يناسب مساحتك. نصمم وننفّذ أثاثاً يعكس ذوقك ويدوم لأجيال.",
     brandBio: "حلول خشبية تجمع بين التصميم المدروس، وجمال الخامات، والاهتمام بتفاصيل المساحة. نصنع كل قطعة بشغف ومهارة هندسية استثنائية.",
     contactInfo: {
-      phone: "+966 50 000 0000",
+      phone: "+966 53 382 8115",
       phoneTel: "+966500000000",
       whatsapp: "https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A%20%D9%85%D8%B9%20%D8%B1%D9%90%D9%88%D8%A7%D9%82",
       email: "info@riwaq-wood.com",
