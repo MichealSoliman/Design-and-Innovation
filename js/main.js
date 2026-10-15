@@ -662,16 +662,16 @@ class LuxuryAboutController {
 
     this.materialsData = {
       grain: {
-        img: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
-        badge: 'NATURAL WALNUT GRAIN',
-        alt: 'ملمس خشب الجوز الطبيعي المقرب',
-        desc: 'ننتقي كل لوح خشبي بعناية فائقة مع مراعاة اتجاه الألياف الطبيعية ونعومة الملمس، ونستخدم زيوت تشطيب أوروبية غير لامعة تحمي الخشب وتبرز دفئه الأصيل.'
+        img: '../img/Bedrooms/Warm Minimalist Bedroom with Built-In Storage.png',
+        badge: 'NATURAL WALNUT & OAK',
+        alt: 'ملمس وتفاصيل خشب الجوز الطبيعي والبلوط في المشاريع السكنية السعودية',
+        desc: 'ننتقي خامات خشبية طبيعية معالجة حرارياً لمقاومة مناخ المملكة ودرجات الحرارة، مع تشطيبات أوروبية وملمس حريري يبرز فخامة الفراغ السكني.'
       },
       joinery: {
-        img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80',
-        badge: 'HANDCRAFTED JOINERY SPEC',
-        alt: 'تفاصيل التعشيقات والوصلات الخشبية الحرفية',
-        desc: 'تعشيقات خشبية معمارية بنظام التداخل الداخلي بدون مسامير ظاهرة، تمنح الهيكل ثباتاً إنشائياً فائقاً مع أطراف مصقولة يدوياً بأعلى درجات الإتقان.'
+        img: '../img/Wooden-decor/Gemini_Generated_Image_ydrtfpydrtfpydrt.jpg.jpeg',
+        badge: 'SAUDI BESPOKE JOINERY',
+        alt: 'تفاصيل التعشيقات والوصلات الخشبية المعمارية المنفذة في مصنعنا بالرياض',
+        desc: 'تعشيقات خشبية مصنعة آلياً بأحدث ماكينات الـ CNC الإيطالية في مصنعنا بالرياض، بنظام تداخل هندسي مخفي بدون مسامير ظاهرة، تمنح الأثاث متانة فائقة تدوم لأجيال.'
       }
     };
 
@@ -2078,7 +2078,7 @@ class LuxuryBranchAtlasController {
         phones: [
           { number: '0534001939', label: 'الرقم المباشر' }
         ],
-        mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
+        mapsUrl: 'https://maps.app.goo.gl/TfGWHyj4Ks8vEzBg7',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       },
@@ -2094,7 +2094,7 @@ class LuxuryBranchAtlasController {
         phones: [
           { number: '0539397326', label: 'الرقم المباشر' }
         ],
-        mapsUrl: 'https://share.google/SyhuyADqAx3XPWQdH',
+        mapsUrl: 'https://maps.app.goo.gl/c6m5434struVcoUj9',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
       },
@@ -2111,7 +2111,7 @@ class LuxuryBranchAtlasController {
           { number: '0533879478', label: 'رقم 01' },
           { number: '0552207629', label: 'رقم 02' }
         ],
-        mapsUrl: 'https://share.google/LKRspYWMtX0w8RT4Z',
+        mapsUrl: 'https://maps.app.goo.gl/nsAs7cUGsdVP2UAD7',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       }
