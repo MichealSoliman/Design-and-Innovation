@@ -103,9 +103,9 @@ const LUXURY_SLIDES_DATA = {
         text: "اطلب تصميمك الخاص",
         href: "#custom-order"
       },
-      image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1920&q=80",
-      thumbImage: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=300&q=80",
-      alt: "وحدة تسريحة خشبية أنيقة مع مرآة مضاءة وتفاصيل خشبية متقنة"
+      image: "img/Hairstyles/Gemini_Generated_Image_fd0fo0fd0fo0fd0f.jpg.jpeg",
+      thumbImage: "img/Hairstyles/Gemini_Generated_Image_fd0fo0fd0fo0fd0f.jpg.jpeg",
+      alt: "وحدة تسريحة خشبية فاخرة مع مرآة مضاءة وتفاصيل خشبية متقنة"
     }
   ],
   services: [
@@ -139,7 +139,7 @@ const LUXURY_SLIDES_DATA = {
       name: "التسريحات ووحدات المكياج",
       title: "تفاصيل صغيرة.. بحضور كبير",
       description: "وحدات أنيقة تجمع بين المظهر المميز والاستخدام العملي، بتصميم يناسب المساحة المحيطة.",
-      image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1600&q=80",
+      image: "img/Hairstyles/Gemini_Generated_Image_9559459559459559.jpg.jpeg",
       spec: "مرايا ذكية • أدراج مخملية مقسمة • إضاءة متوازنة",
       dimensions: "DIM: 160 × 85 CM",
       href: "#vanity",
