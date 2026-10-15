@@ -382,7 +382,16 @@ class LuxuryHeroSlider {
       if (i === index) {
         btn.classList.add('active', 'border-[#B89A68]', 'bg-[#684632]/50', 'ring-2', 'ring-[#B89A68]/40');
         btn.classList.remove('border-white/10', 'bg-[#24231F]/60');
-        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        // Scroll horizontally only inside the thumbnails container, NEVER the window/page
+        if (this.mobileThumbnailsContainer) {
+          const container = this.mobileThumbnailsContainer;
+          const containerRect = container.getBoundingClientRect();
+          if (containerRect.bottom > 0 && containerRect.top < window.innerHeight) {
+            const btnRect = btn.getBoundingClientRect();
+            const offset = (btnRect.left + btnRect.width / 2) - (containerRect.left + containerRect.width / 2);
+            container.scrollBy({ left: offset, behavior: 'smooth' });
+          }
+        }
       } else {
         btn.classList.remove('active', 'border-[#B89A68]', 'bg-[#684632]/50', 'ring-2', 'ring-[#B89A68]/40');
         btn.classList.add('border-white/10', 'bg-[#24231F]/60');
@@ -568,6 +577,20 @@ class LuxuryHeroSlider {
           this.setPausedState(true);
         }
       });
+    }
+
+    // Pause autoplay when hero section is not visible on screen to save resources and avoid layout thrashing
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window && this.heroSection) {
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.resumeAutoplay();
+          } else {
+            this.pauseAutoplay();
+          }
+        });
+      }, { threshold: 0.05 });
+      heroObserver.observe(this.heroSection);
     }
   }
 
@@ -941,7 +964,15 @@ class LuxuryServicesController {
       if (i === index) {
         btn.className = 'mobile-service-pill shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl border text-xs whitespace-nowrap transition-all duration-200 cursor-pointer active bg-walnut text-ivory border-gold/60 ring-2 ring-gold/30 font-bold';
         btn.setAttribute('aria-selected', 'true');
-        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        if (this.mobileTabsContainer) {
+          const container = this.mobileTabsContainer;
+          const containerRect = container.getBoundingClientRect();
+          if (containerRect.bottom > 0 && containerRect.top < window.innerHeight) {
+            const btnRect = btn.getBoundingClientRect();
+            const offset = (btnRect.left + btnRect.width / 2) - (containerRect.left + containerRect.width / 2);
+            container.scrollBy({ left: offset, behavior: 'smooth' });
+          }
+        }
       } else {
         btn.className = 'mobile-service-pill shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl border text-xs whitespace-nowrap transition-all duration-200 cursor-pointer bg-white/5 text-ivory/70 border-white/10 hover:text-ivory';
         btn.setAttribute('aria-selected', 'false');
@@ -1583,7 +1614,10 @@ class LuxuryGalleryController {
     // Auto-center clicked button within the track
     this.filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        const trackRect = track.getBoundingClientRect();
+        const btnRect = btn.getBoundingClientRect();
+        const offset = (btnRect.left + btnRect.width / 2) - (trackRect.left + trackRect.width / 2);
+        track.scrollBy({ left: offset, behavior: 'smooth' });
       });
     });
 
@@ -1888,7 +1922,10 @@ class LuxuryGalleryController {
         if (i === this.currentIndex) {
           t.classList.add('is-active');
           t.classList.remove('opacity-60');
-          t.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          const filmstripRect = this.filmstrip.getBoundingClientRect();
+          const tRect = t.getBoundingClientRect();
+          const offset = (tRect.left + tRect.width / 2) - (filmstripRect.left + filmstripRect.width / 2);
+          this.filmstrip.scrollBy({ left: offset, behavior: 'smooth' });
         } else {
           t.classList.remove('is-active');
           t.classList.add('opacity-60');

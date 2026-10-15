@@ -2413,7 +2413,10 @@
                         if (i === currentIndex) {
                             th.classList.add('border-gold', 'ring-1', 'ring-gold', 'opacity-100');
                             th.classList.remove('border-white/20', 'opacity-60');
-                            th.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                            const fsRect = lightboxFilmstrip.getBoundingClientRect();
+                            const thRect = th.getBoundingClientRect();
+                            const offset = (thRect.left + thRect.width / 2) - (fsRect.left + fsRect.width / 2);
+                            lightboxFilmstrip.scrollBy({ left: offset, behavior: 'smooth' });
                         } else {
                             th.classList.remove('border-gold', 'ring-1', 'ring-gold', 'opacity-100');
                             th.classList.add('border-white/20', 'opacity-60');
