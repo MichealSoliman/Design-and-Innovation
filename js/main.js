@@ -240,8 +240,8 @@ class LuxuryHeroSlider {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = `thumb-card w-full text-right p-2.5 rounded-2xl border transition-all duration-300 flex items-center gap-3.5 group cursor-pointer ${index === 0
-            ? 'active border-[#CFB78C] bg-[#324D3E]/40 shadow-lg'
-            : 'border-white/10 bg-[#19241E]/50 hover:bg-[#19241E]/80 hover:border-white/20'
+          ? 'active border-[#CFB78C] bg-[#324D3E]/40 shadow-lg'
+          : 'border-white/10 bg-[#19241E]/50 hover:bg-[#19241E]/80 hover:border-white/20'
           }`;
         btn.setAttribute('aria-label', `الانتقال إلى شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
@@ -279,8 +279,8 @@ class LuxuryHeroSlider {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = `mobile-thumb-card shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl border text-right transition-all duration-300 cursor-pointer ${index === 0
-            ? 'active border-[#CFB78C] bg-[#324D3E]/50 ring-2 ring-[#CFB78C]/40'
-            : 'border-white/10 bg-[#19241E]/60'
+          ? 'active border-[#CFB78C] bg-[#324D3E]/50 ring-2 ring-[#CFB78C]/40'
+          : 'border-white/10 bg-[#19241E]/60'
           }`;
         btn.setAttribute('aria-label', `شريحة ${slide.categoryShort}`);
         btn.setAttribute('data-index', index);
@@ -849,8 +849,8 @@ class LuxuryServicesController {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = `service-catalog-item w-full p-3 rounded-2xl border text-right flex items-center justify-between group cursor-pointer ${index === 0
-          ? 'active'
-          : 'border-white/5 hover:border-white/20 hover:bg-white/5'
+        ? 'active'
+        : 'border-white/5 hover:border-white/20 hover:bg-white/5'
         }`;
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
@@ -890,8 +890,8 @@ class LuxuryServicesController {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = `mobile-service-pill shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl border text-xs whitespace-nowrap transition-all duration-200 cursor-pointer ${index === 0
-          ? 'active bg-walnut text-ivory border-gold/60 ring-2 ring-gold/30 font-bold'
-          : 'bg-white/5 text-ivory/70 border-white/10 hover:text-ivory'
+        ? 'active bg-walnut text-ivory border-gold/60 ring-2 ring-gold/30 font-bold'
+        : 'bg-white/5 text-ivory/70 border-white/10 hover:text-ivory'
         }`;
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
@@ -1468,8 +1468,8 @@ class LuxuryContactFormController {
     if (!this.alertBox) return;
     this.alertBox.textContent = message;
     this.alertBox.className = `p-3.5 rounded-xl text-xs font-semibold border ${isError
-        ? 'bg-rose-950/40 text-rose-300 border-rose-500/30'
-        : 'bg-emerald-950/40 text-emerald-300 border-emerald-500/30'
+      ? 'bg-rose-950/40 text-rose-300 border-rose-500/30'
+      : 'bg-emerald-950/40 text-emerald-300 border-emerald-500/30'
       } transition-all duration-300`;
     this.alertBox.classList.remove('hidden');
   }
@@ -1535,8 +1535,8 @@ class LuxuryContactFormController {
           const name = encodeURIComponent(this.nameInput?.value.trim() || '');
           const service = encodeURIComponent(this.selectedService || '');
           const details = encodeURIComponent(this.detailsInput?.value.trim() || '');
-          const msg = `مرحباً ابتكار وتصميم، أنا ${name}. أود مناقشة مشروع (${service}). التفاصيل: ${details}`;
-          whatsappBtn.href = `https://wa.me/966500000000?text=${encodeURIComponent(msg)}`;
+          const msg = `مرحباً شركة ابتكار وتصميم، أنا ${name}. أود مناقشة مشروع (${service}). التفاصيل: ${details}`;
+          whatsappBtn.href = `https://wa.me/966533828115?text=${encodeURIComponent(msg)}`;
         }
       }
     }, 600);
@@ -1890,7 +1890,7 @@ class LuxuryGalleryController {
 
     const src = currentItem.getAttribute('data-img-src') || currentItem.querySelector('img')?.src || '';
     const title = currentItem.getAttribute('data-title') || currentItem.querySelector('img')?.alt || 'مشروع خشبي فاخر';
-    const cat = currentItem.getAttribute('data-category') || 'ابتكار وتصميم للأعمال الخشبية';
+    const cat = currentItem.getAttribute('data-category') || 'شركة ابتكار وتصميم للأعمال الخشبية';
 
     if (this.lightboxImg) {
       this.lightboxImg.src = src;
@@ -1912,8 +1912,8 @@ class LuxuryGalleryController {
     }
 
     if (this.waBtn) {
-      const msg = `مرحباً ابتكار وتصميم، أود الاستفسار عن تصميم (${title}) من فئة (${cat}).`;
-      this.waBtn.href = `https://wa.me/966500000000?text=${encodeURIComponent(msg)}`;
+      const msg = `مرحباً شركة ابتكار وتصميم، أود الاستفسار عن تصميم (${title}) من فئة (${cat}).`;
+      this.waBtn.href = `https://wa.me/966533828115?text=${encodeURIComponent(msg)}`;
     }
 
     if (this.filmstrip) {
@@ -2101,12 +2101,12 @@ class LuxuryBranchAtlasController {
       {
         id: 'design',
         index: '03',
-        name: 'ابتكار وتصميم',
+        name: 'شركة ابتكار وتصميم',
         region: 'الرياض',
         address: 'حي الورود، طريق الملك عبدالعزيز',
         type: 'مركز الابتكار والتخصيص الهندسي',
-        badge: 'INNOVATION & BESPOKE DESIGN • ابتكار وتصميم',
-        desc: 'مركز ابتكار وتصميم بالرياض، حي الورود طريق الملك عبدالعزيز، لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
+        badge: 'INNOVATION & BESPOKE DESIGN • شركة ابتكار وتصميم',
+        desc: 'مركز شركة ابتكار وتصميم بالرياض، حي الورود طريق الملك عبدالعزيز، لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
         phones: [
           { number: '0533879478', label: 'رقم 01' },
           { number: '0552207629', label: 'رقم 02' }
