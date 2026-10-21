@@ -2054,6 +2054,12 @@ function initializeRiwaq() {
       window.previousWorksController = new LuxuryPreviousWorksController();
       console.log('[RIWAQ] Previous Works controller initialized.');
     }
+
+    // Floating Quick Contact Directory Controller ("دليل أرقام التواصل والواتساب")
+    if (!window.floatingContactController && document.getElementById('floating-contact-widget')) {
+      window.floatingContactController = new LuxuryFloatingContactController();
+      console.log('[RIWAQ] Floating Contact Directory controller initialized.');
+    }
   } catch (err) {
     console.error('[RIWAQ] Init Error:', err);
   }
@@ -2072,41 +2078,10 @@ class LuxuryBranchAtlasController {
 
     // Branches dataset with verified phone numbers & addresses
     this.branches = [
-      {
-        id: 'main',
-        index: '01',
-        name: 'ارتلومكسا – الرياض',
-        region: 'الرياض',
-        address: 'حي الورود، طريق الملك عبدالعزيز',
-        type: 'المقر الرئيسي والأتيليه المعماري',
-        badge: 'HQ & FLAGSHIP ATELIER • ارتلومكسا الرياض',
-        desc: 'فرع ارتلومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
-        phones: [
-          { number: '0534001939', label: 'الرقم المباشر' }
-        ],
-        mapsUrl: 'https://maps.app.goo.gl/TfGWHyj4Ks8vEzBg7',
-        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
-      },
-      {
-        id: 'ahsa',
-        index: '02',
-        name: 'ارتلومكسا – الأحساء',
-        region: 'الأحساء',
-        address: 'حي الفتح، المبرز',
-        type: 'صالة عرض وتصميم مخصص',
-        badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
-        desc: 'فرع ارتلومكسا بالأحساء، حي الفتح - المبرز، لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
-        phones: [
-          { number: '0539397326', label: 'الرقم المباشر' }
-        ],
-        mapsUrl: 'https://maps.app.goo.gl/c6m5434struVcoUj9',
-        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
-      },
-      {
+
+       {
         id: 'design',
-        index: '03',
+        index: '01',
         name: 'شركة ابتكار وتصميم',
         region: 'الرياض',
         address: 'حي الورود، طريق الملك عبدالعزيز',
@@ -2120,7 +2095,41 @@ class LuxuryBranchAtlasController {
         mapsUrl: 'https://maps.app.goo.gl/nsAs7cUGsdVP2UAD7',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
-      }
+      },
+        {
+        id: 'ahsa',
+        index: '02',
+        name: 'ارت لومكسا الاحساء',
+        region: 'الأحساء',
+        address: 'حي الفتح، المبرز',
+        type: 'صالة عرض وتصميم مخصص',
+        badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
+        desc: 'فرع ارتلومكسا بالأحساء، حي الفتح - المبرز، لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
+        phones: [
+          { number: '0539397326', label: 'الرقم المباشر' }
+        ],
+        mapsUrl: 'https://maps.app.goo.gl/c6m5434struVcoUj9',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
+      },
+      {
+        id: 'main',
+        index: '03',
+        name: 'ارتلومكسا – الرياض',
+        region: 'الرياض',
+        address: 'حي الورود، طريق الملك عبدالعزيز',
+        type: 'المقر الرئيسي والأتيليه المعماري',
+        badge: 'HQ & FLAGSHIP ATELIER • ارتلومكسا الرياض',
+        desc: 'فرع ارتلومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
+        phones: [
+          { number: '0534001939', label: 'الرقم المباشر' }
+        ],
+        mapsUrl: 'https://maps.app.goo.gl/TfGWHyj4Ks8vEzBg7',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
+      },
+    
+     
     ];
 
     this.currentIndex = 0;
@@ -2391,6 +2400,117 @@ class LuxuryPreviousWorksController {
         }
       });
     });
+  }
+}
+
+/**
+ * ==========================================================================
+ * LUXURY FLOATING CONTACT DIRECTORY CONTROLLER
+ * Toggles a beautiful popup menu with all company numbers & WhatsApp links
+ * ==========================================================================
+ */
+class LuxuryFloatingContactController {
+  constructor() {
+    this.widget = document.getElementById('floating-contact-widget');
+    if (!this.widget) return;
+    this.triggerBtn = this.widget.querySelector('#floating-contact-trigger');
+    this.modal = this.widget.querySelector('#floating-contact-modal');
+    this.closeBtn = this.widget.querySelector('#floating-contact-close');
+    this.backdrop = this.widget.querySelector('#floating-contact-backdrop');
+    this.iconOpen = this.widget.querySelector('#floating-contact-icon-open');
+    this.iconClose = this.widget.querySelector('#floating-contact-icon-close');
+    this.isOpen = false;
+    this.init();
+  }
+
+  init() {
+    if (this.triggerBtn) {
+      this.triggerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggle();
+      });
+    }
+
+    if (this.closeBtn) {
+      this.closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.close();
+      });
+    }
+
+    if (this.backdrop) {
+      this.backdrop.addEventListener('click', () => {
+        this.close();
+      });
+    }
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.isOpen) {
+        this.close();
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (this.isOpen && !this.widget.contains(e.target)) {
+        this.close();
+      }
+    });
+  }
+
+  toggle() {
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+
+  open() {
+    if (!this.modal) return;
+    this.isOpen = true;
+    this.triggerBtn?.setAttribute('aria-expanded', 'true');
+    this.modal.classList.remove('hidden', 'pointer-events-none');
+    if (this.backdrop) {
+      this.backdrop.classList.remove('hidden', 'pointer-events-none');
+    }
+
+    requestAnimationFrame(() => {
+      this.modal.classList.remove('opacity-0', 'scale-90', 'translate-y-4');
+      this.modal.classList.add('opacity-100', 'scale-100', 'translate-y-0');
+      if (this.backdrop) {
+        this.backdrop.classList.remove('opacity-0');
+        this.backdrop.classList.add('opacity-100');
+      }
+      if (this.iconOpen) this.iconOpen.classList.add('hidden');
+      if (this.iconClose) this.iconClose.classList.remove('hidden');
+    });
+  }
+
+  close() {
+    if (!this.modal) return;
+    this.isOpen = false;
+    this.triggerBtn?.setAttribute('aria-expanded', 'false');
+    this.modal.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
+    this.modal.classList.add('opacity-0', 'scale-90', 'translate-y-4');
+    if (this.backdrop) {
+      this.backdrop.classList.remove('opacity-100');
+      this.backdrop.classList.add('opacity-0');
+    }
+    if (this.iconOpen) this.iconOpen.classList.remove('hidden');
+    if (this.iconClose) this.iconClose.classList.add('hidden');
+
+    setTimeout(() => {
+      if (!this.isOpen) {
+        this.modal.classList.add('hidden', 'pointer-events-none');
+        if (this.backdrop) {
+          this.backdrop.classList.add('hidden', 'pointer-events-none');
+        }
+      }
+    }, 280);
   }
 }
 
