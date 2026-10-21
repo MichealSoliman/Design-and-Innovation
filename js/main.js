@@ -663,9 +663,9 @@ class LuxuryAboutController {
     this.materialsData = {
       grain: {
         img: '../img/Bedrooms/Warm Minimalist Bedroom with Built-In Storage.png',
-        badge: 'NATURAL WALNUT & OAK',
-        alt: 'ملمس وتفاصيل خشب الجوز الطبيعي والبلوط في المشاريع السكنية السعودية',
-        desc: 'ننتقي خامات خشبية طبيعية معالجة حرارياً لمقاومة مناخ المملكة ودرجات الحرارة، مع تشطيبات أوروبية وملمس حريري يبرز فخامة الفراغ السكني.'
+        badge: 'ANTIBACTERIAL & MOISTURE-RESISTANT CHIPBOARD',
+        alt: 'ملمس وتفاصيل خشب شيبورد معالج ضد البكتيريا والرطوبة في المشاريع السكنية والتجارية',
+        desc: 'نعتمد حصرياً ألواح خشب شيبورد معالج ضد البكتيريا والرطوبة وفق أرقى المقاييس العالمية، لتوفير حماية صحية دائمة وعزل استثنائي ضد الرطوبة مع ملمس حريري وفخامة معمارية تدوم لعقود.'
       },
       joinery: {
         img: '../img/Wooden-decor/Gemini_Generated_Image_ydrtfpydrtfpydrt.jpg.jpeg',
@@ -2048,6 +2048,12 @@ function initializeRiwaq() {
       window.branchAtlasController = new LuxuryBranchAtlasController();
       console.log('[RIWAQ] The Branch Atlas controller initialized.');
     }
+
+    // Previous Works Filter Controller ("سابقة أعمالنا والمشاريع الكبرى")
+    if (!window.previousWorksController && document.getElementById('previous-works')) {
+      window.previousWorksController = new LuxuryPreviousWorksController();
+      console.log('[RIWAQ] Previous Works controller initialized.');
+    }
   } catch (err) {
     console.error('[RIWAQ] Init Error:', err);
   }
@@ -2248,6 +2254,143 @@ class LuxuryBranchAtlasController {
     } else {
       updateContent();
     }
+  }
+}
+
+/**
+ * ==========================================================================
+ * PREVIOUS WORKS & MAJOR CLIENTS CONTROLLER
+ * Interactive Filtering for 13 National Corporate & Ministerial Landmarks
+ * ==========================================================================
+ */
+class LuxuryPreviousWorksController {
+  constructor() {
+    this.section = document.getElementById('previous-works');
+    if (!this.section) return;
+    this.filterButtons = this.section.querySelectorAll('.works-filter-btn');
+    this.cards = this.section.querySelectorAll('.works-card');
+    this.scrollContainer = this.section.querySelector('#works-scroll-container');
+    this.btnPrev = this.section.querySelector('#works-scroll-prev');
+    this.btnNext = this.section.querySelector('#works-scroll-next');
+    this.init();
+  }
+
+  init() {
+    // Scroll navigation arrows and drag-to-scroll
+    if (this.scrollContainer) {
+      const container = this.scrollContainer;
+
+      // Resilient RTL scroll step
+      const scrollStep = (direction) => {
+        // In RTL, left is usually negative in Chromium/Firefox, but test dynamically
+        const amount = direction * 330;
+        const prevScroll = container.scrollLeft;
+        container.scrollBy({ left: amount, behavior: 'smooth' });
+
+        // Fallback for inverted RTL implementations
+        setTimeout(() => {
+          if (container.scrollLeft === prevScroll) {
+            container.scrollBy({ left: -amount, behavior: 'smooth' });
+          }
+        }, 60);
+      };
+
+      if (this.btnPrev) {
+        // Prev button (points right -> moves back to start)
+        this.btnPrev.addEventListener('click', (e) => {
+          e.preventDefault();
+          scrollStep(1);
+        });
+      }
+
+      if (this.btnNext) {
+        // Next button (points left -> moves forward to next items)
+        this.btnNext.addEventListener('click', (e) => {
+          e.preventDefault();
+          scrollStep(-1);
+        });
+      }
+
+      // Mouse Drag-to-Scroll for desktop
+      let isDown = false;
+      let startX = 0;
+      let startScroll = 0;
+
+      container.classList.add('cursor-grab');
+
+      container.addEventListener('mousedown', (e) => {
+        // Ignore clicks on buttons or links inside
+        if (e.target.closest('button, a')) return;
+        isDown = true;
+        container.classList.add('cursor-grabbing');
+        container.classList.remove('cursor-grab');
+        startX = e.pageX - container.offsetLeft;
+        startScroll = container.scrollLeft;
+      });
+
+      const stopDrag = () => {
+        if (!isDown) return;
+        isDown = false;
+        container.classList.remove('cursor-grabbing');
+        container.classList.add('cursor-grab');
+      };
+
+      window.addEventListener('mouseup', stopDrag);
+      container.addEventListener('mouseleave', stopDrag);
+
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.4;
+        container.scrollLeft = startScroll - walk;
+      });
+
+      // Horizontal Mouse Wheel Scroll
+      container.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && !e.shiftKey) {
+          // If user scrolls wheel vertically over cards, translate gently to horizontal scroll
+          if (Math.abs(e.deltaY) > 20) {
+            container.scrollLeft += e.deltaY * 0.8;
+          }
+        }
+      }, { passive: true });
+    }
+
+
+    // Filter Buttons
+    this.filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-works-filter');
+        this.filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-gold', 'text-[#19241E]', 'font-bold');
+          b.classList.add('bg-white', 'text-[#324D3E]/80', 'font-semibold', 'border-[#324D3E]/10');
+        });
+        btn.classList.add('active', 'bg-gold', 'text-[#19241E]', 'font-bold');
+        btn.classList.remove('bg-white', 'text-[#324D3E]/80', 'font-semibold');
+
+        this.cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.97)';
+            requestAnimationFrame(() => {
+              card.style.transition = 'all 0.25s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            });
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Reset scroll position on filter
+        if (this.scrollContainer) {
+          this.scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+      });
+    });
   }
 }
 
