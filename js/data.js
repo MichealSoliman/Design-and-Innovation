@@ -7,8 +7,8 @@ const LUXURY_SLIDES_DATA = {
   brand: {
     name: "شركة ابتكار وتصميم",
     tagline: "للأعمال الخشبية والأثاث الفاخر",
-    phone: "+966533828115",
-    whatsapp: "https://wa.me/966533828115?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AD%D9%88%D9%84%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%20%D8%A3%D8%AB%D8%A7%D8%AB%20%D8%AE%D8%B4%D8%A8%D9%8A",
+    phone: "+966533879478",
+    whatsapp: "https://wa.me/966533879478?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AD%D9%88%D9%84%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%20%D8%A3%D8%AB%D8%A7%D8%AB%20%D8%AE%D8%B4%D8%A8%D9%8A",
     address: "الرياض حي الورود طريق الملك عبد العزيز",
     workingHours: {
       weekdays: "الأحد — الخميس: 9:30 ص – 12:00 م ، 4:00 م – 11:00 م",
@@ -31,7 +31,7 @@ const LUXURY_SLIDES_DATA = {
       },
       secondaryCta: {
         text: "احجز زيارة استشارية",
-        href: "https://wa.me/966533828115?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9"
+        href: "https://wa.me/966533879478?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9"
       },
       image: "img/kitchen/Artboard 6.png",
       thumbImage: "img/kitchen/Artboard 6.png",
@@ -69,7 +69,7 @@ const LUXURY_SLIDES_DATA = {
       },
       secondaryCta: {
         text: "طلب مقاسات خاصة",
-        href: "https://wa.me/966533828115?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%82%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%AE%D8%A7%D8%B5%D8%A9"
+        href: "https://wa.me/966533879478?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%82%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%AE%D8%A7%D8%B5%D8%A9"
       },
       image: "img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg",
       thumbImage: "img/dressing-room/Gemini_Generated_Image_7o0dnm7o0dnm7o0d.jpg.jpeg",
@@ -121,7 +121,7 @@ const LUXURY_SLIDES_DATA = {
       name: "خزائن ودواليب الملابس",
       title: "مساحة لكل تفصيلة",
       description: "حلول تخزين تساعد على استغلال المساحة بذكاء، مع تصميمات تتناسب مع الغرفة واحتياجات الاستخدام اليومية.",
-      image: "./img/dressing-room/Gemini_Generated_Image_epljefepljefeplj.jpg.jpeg",
+      image: "img/dressing-room/bespoke_tower_closet.jpg",
       spec: "خزائن Walk-in • إضاءات LED مخفية • أرفف ذكية",
       dimensions: "DIM: 360 × 260 CM",
       href: "#wardrobes",
@@ -157,7 +157,7 @@ const LUXURY_SLIDES_DATA = {
       name: "البارتشنات والفواصل الخشبية",
       title: "افصل المساحة دون أن تفقد اتساعها",
       description: "فواصل خشبية تضيف خصوصية وتنظيمًا للمكان، مع الحفاظ على الانسجام مع بقية التصميم.",
-      image: "img/Wooden-decor/Gemini_Generated_Image_8xzcgk8xzcgk8xzc.jpg.jpeg",
+      image: "img/Wooden-decor/wood_decor_divider.jpg",
       spec: "شرائح خشبية معمارية • فواصل دوارة • تهوية وبصرية",
       dimensions: "DIM: 280 × 290 CM",
       href: "#partitions",
@@ -169,7 +169,7 @@ const LUXURY_SLIDES_DATA = {
       name: "التكسيات والديكورات الجدارية",
       title: "الجدران جزء من الحكاية",
       description: "تكسيات وديكورات خشبية تضيف عمقًا بصريًا وتربط تفاصيل التصميم الداخلي معًا.",
-      image: "img/Wooden-decor/Gemini_Generated_Image_5a3s6o5a3s6o5a3s (1).jpg.jpeg",
+      image: "img/Wooden-decor/cladding_3d_wall.jpg",
       spec: "تكسيات ثلاثية الأبعاد • عزل صوتي جمالي • أخشاب طبيعية",
       dimensions: "DIM: 520 × 300 CM",
       href: "#cladding",
@@ -308,8 +308,8 @@ const LUXURY_SLIDES_DATA = {
     brandBio: "حلول خشبية تجمع بين التصميم المدروس، وجمال الخامات، والاهتمام بتفاصيل المساحة. نصنع كل قطعة بشغف ومهارة هندسية استثنائية.",
     contactInfo: {
       phone: "+966 53 382 8115",
-      phoneTel: "+966533828115",
-      whatsapp: "https://wa.me/966533828115?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A%20%D9%85%D8%B9%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1%20%D9%88%D8%AA%D8%B5%D9%85%D9%8A%D9%85",
+      phoneTel: "+966533879478",
+      whatsapp: "https://wa.me/966533879478?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A%20%D9%85%D8%B9%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1%20%D9%88%D8%AA%D8%B5%D9%85%D9%8A%D9%85",
       email: "",
       address: "الرياض، المملكة العربية السعودية - حي الملقا",
       hours: "السبت – الخميس: 9:00 ص – 9:00 م"
@@ -317,7 +317,7 @@ const LUXURY_SLIDES_DATA = {
     socialLinks: [
       { name: "Instagram", url: "https://instagram.com", icon: "instagram" },
       { name: "Pinterest", url: "https://pinterest.com", icon: "pinterest" },
-      { name: "WhatsApp", url: "https://wa.me/966533828115", icon: "whatsapp" },
+      { name: "WhatsApp", url: "https://wa.me/966533879478", icon: "whatsapp" },
       { name: "X", url: "https://x.com", icon: "twitter" },
       { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" }
     ]

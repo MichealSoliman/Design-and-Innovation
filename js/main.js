@@ -1536,7 +1536,7 @@ class LuxuryContactFormController {
           const service = encodeURIComponent(this.selectedService || '');
           const details = encodeURIComponent(this.detailsInput?.value.trim() || '');
           const msg = `مرحباً شركة ابتكار وتصميم، أنا ${name}. أود مناقشة مشروع (${service}). التفاصيل: ${details}`;
-          whatsappBtn.href = `https://wa.me/966533828115?text=${encodeURIComponent(msg)}`;
+          whatsappBtn.href = `https://wa.me/966533879478?text=${encodeURIComponent(msg)}`;
         }
       }
     }, 600);
@@ -1913,7 +1913,7 @@ class LuxuryGalleryController {
 
     if (this.waBtn) {
       const msg = `مرحباً شركة ابتكار وتصميم، أود الاستفسار عن تصميم (${title}) من فئة (${cat}).`;
-      this.waBtn.href = `https://wa.me/966533828115?text=${encodeURIComponent(msg)}`;
+      this.waBtn.href = `https://wa.me/966533879478?text=${encodeURIComponent(msg)}`;
     }
 
     if (this.filmstrip) {
@@ -2078,8 +2078,7 @@ class LuxuryBranchAtlasController {
 
     // Branches dataset with verified phone numbers & addresses
     this.branches = [
-
-       {
+      {
         id: 'design',
         index: '01',
         name: 'شركة ابتكار وتصميم',
@@ -2096,31 +2095,15 @@ class LuxuryBranchAtlasController {
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       },
-        {
-        id: 'ahsa',
-        index: '02',
-        name: 'ارت لومكسا الاحساء',
-        region: 'الأحساء',
-        address: 'حي الفتح، المبرز',
-        type: 'صالة عرض وتصميم مخصص',
-        badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
-        desc: 'فرع ارتلومكسا بالأحساء، حي الفتح - المبرز، لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
-        phones: [
-          { number: '0539397326', label: 'الرقم المباشر' }
-        ],
-        mapsUrl: 'https://maps.app.goo.gl/c6m5434struVcoUj9',
-        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
-        coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
-      },
       {
         id: 'main',
-        index: '03',
-        name: 'ارتلومكسا – الرياض',
+        index: '02',
+        name: 'ارت لومكسا – الرياض',
         region: 'الرياض',
         address: 'حي الورود، طريق الملك عبدالعزيز',
         type: 'المقر الرئيسي والأتيليه المعماري',
-        badge: 'HQ & FLAGSHIP ATELIER • ارتلومكسا الرياض',
-        desc: 'فرع ارتلومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
+        badge: 'HQ & FLAGSHIP ATELIER • ارت لومكسا الرياض',
+        desc: 'فرع ارت لومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
         phones: [
           { number: '0534001939', label: 'الرقم المباشر' }
         ],
@@ -2128,8 +2111,22 @@ class LuxuryBranchAtlasController {
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
         coordNote: 'RIYADH • AL WURUD • KING ABDULAZIZ RD'
       },
-    
-     
+      {
+        id: 'ahsa',
+        index: '03',
+        name: 'ارت لومكسا الاحساء',
+        region: 'الأحساء',
+        address: 'حي الفتح، المبرز',
+        type: 'صالة عرض وتصميم مخصص',
+        badge: 'EASTERN PROVINCE DESTINATION • فرع الأحساء',
+        desc: 'فرع ارت لومكسا بالأحساء، حي الفتح - المبرز، لخدمة المنطقة الشرقية، لتصميم وتنفيذ الحلول الخشبية والأثاث المخصص بأعلى معايير الإتقان.',
+        phones: [
+          { number: '0539397326', label: 'الرقم المباشر' }
+        ],
+        mapsUrl: 'https://maps.app.goo.gl/c6m5434struVcoUj9',
+        status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
+        coordNote: 'AL AHSA • AL FATH • AL MUBARRAZ'
+      }
     ];
 
     this.currentIndex = 0;
@@ -2158,8 +2155,14 @@ class LuxuryBranchAtlasController {
   bindEvents() {
     this.buttons.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
-        if (this.currentIndex === idx) return;
-        this.selectBranch(idx);
+        const branchId = btn.getAttribute('data-branch-id');
+        let targetIdx = idx;
+        if (branchId) {
+          const foundIdx = this.branches.findIndex(b => b.id === branchId);
+          if (foundIdx !== -1) targetIdx = foundIdx;
+        }
+        if (this.currentIndex === targetIdx) return;
+        this.selectBranch(targetIdx);
       });
 
       // Accessible Keyboard Navigation
@@ -2292,7 +2295,7 @@ class LuxuryPreviousWorksController {
       // Resilient RTL scroll step
       const scrollStep = (direction) => {
         // In RTL, left is usually negative in Chromium/Firefox, but test dynamically
-        const amount = direction * 330;
+        const amount = direction * 300;
         const prevScroll = container.scrollLeft;
         container.scrollBy({ left: amount, behavior: 'smooth' });
 
