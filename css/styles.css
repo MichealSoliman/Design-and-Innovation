@@ -16,18 +16,36 @@
 }
 
 /* Base resets & typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Cairo', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-page);
   color: #1E2B24;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
   background-color: var(--bg-page);
   color: #1E2B24;
+  position: relative;
+}
+
+/* Guard against mobile horizontal overflow */
+#portfolio-filter-nav,
+#main-content,
+#our-work-gallery,
+.gallery-chapter {
+  max-width: 100%;
 }
 
 /* Global Light-Theme Text Contrast Rules */
