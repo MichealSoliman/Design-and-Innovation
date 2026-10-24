@@ -2089,7 +2089,7 @@ class LuxuryBranchAtlasController {
         desc: 'مركز شركة ابتكار وتصميم بالرياض، حي الورود طريق الملك عبدالعزيز، لبلورة الأفكار وتخصيص الخزائن والمطابخ والغرف الفندقية قبل التصنيع.',
         phones: [
           { number: '0533879478', label: 'رقم 01' },
-          { number: '0552207629', label: 'رقم 02' }
+          { number: '0552262118', label: 'رقم 02' }
         ],
         mapsUrl: 'https://maps.app.goo.gl/nsAs7cUGsdVP2UAD7',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
@@ -2105,7 +2105,8 @@ class LuxuryBranchAtlasController {
         badge: 'HQ & FLAGSHIP ATELIER • ارت لومكسا الرياض',
         desc: 'فرع ارت لومكسا بالرياض، حي الورود طريق الملك عبدالعزيز، لاستقبالكم واستعراض التصاميم المعمارية وخيارات الأثاث والتكسيات الخشبية الفاخرة.',
         phones: [
-          { number: '0534001939', label: 'الرقم المباشر' }
+          { number: '0552207629', label: 'رقم 01' },
+          { number: '0534001939', label: 'رقم 02' }
         ],
         mapsUrl: 'https://maps.app.goo.gl/TfGWHyj4Ks8vEzBg7',
         status: 'موقع جغرافي مؤكد ومباشر عبر خرائط Google',
